@@ -1,9 +1,9 @@
 {
-  "versionCode": 2007,
+  "versionCode": 2006,
   "versionName": "1.0.5",
-  "minVersionCode": 2007,
+  "minVersionCode": 2000,
   "apkUrl": "https://www.uptodown.com/android/imageresizer",
-  "releaseNotes": "• Critical security hardening\n• New high-fidelity UI gradients\n• Performance optimizations",
+  "releaseNotes": "• Premium Glassmorphic Update UI\n• Cloud Sync Loading Overlays\n• Professional UX Refinements",
   "isStoreRedirect": true,
-  "isMandatory": true
+  "isMandatory": false
 }
