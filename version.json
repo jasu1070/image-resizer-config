@@ -1,9 +1,9 @@
 {
-  "versionCode": 2006,
-  "versionName": "1.0.5",
+  "versionCode": 2007,
+  "versionName": "1.0.6",
   "minVersionCode": 2000,
-  "apkUrl": "https://www.uptodown.com/android/imageresizer",
+  "apkUrl": "https://github.com/Technologydevlopment/image-resizer-PRO/releases/download/v1.0.5/app-arm64-v8a-release.apk",
   "releaseNotes": "• Premium Glassmorphic Update UI\n• Cloud Sync Loading Overlays\n• Professional UX Refinements",
-  "isStoreRedirect": true,
+  "isStoreRedirect": false,
   "isMandatory": false
 }
