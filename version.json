@@ -1,9 +1,10 @@
 {
-  "versionCode": 2007,
-  "versionName": "1.0.6",
-  "minVersionCode": 2000,
-  "apkUrl": "https://github.com/Technologydevlopment/image-resizer-PRO/releases/download/v1.0.5/app-arm64-v8a-release.apk",
-  "releaseNotes": "• Premium Glassmorphic Update UI\n• Cloud Sync Loading Overlays\n• Professional UX Refinements",
-  "isStoreRedirect": false,
-  "isMandatory": false
+  "versionCode": 2008,
+  "versionName": "1.0.7",
+  "minVersionCode": 2005,
+  "isMandatory": false,
+  "apkUrl": "https://github.com/jasu1070/IMAGES-RESIZE/releases/download/v1.0.7-2008/app-arm64-v8a-release.apk",
+  "changelog": "• UI Branding: Integrated professional version tags and build signatures.\n• UX Design: Enhanced About and Settings screens with premium branding.\n• Stability: Finalized Expert Engine optimizations for Android 14.",
+  "sha256": "",
+  "isStoreRedirect": false
 }
