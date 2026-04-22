@@ -1,9 +1,10 @@
 {
   "versionCode": 2007,
   "versionName": "1.0.6",
-  "minVersionCode": 2000,
-  "apkUrl": "https://github.com/Technologydevlopment/image-resizer-PRO/releases/download/v1.0.5/app-arm64-v8a-release.apk",
-  "releaseNotes": "• Premium Glassmorphic Update UI\n• Cloud Sync Loading Overlays\n• Professional UX Refinements",
-  "isStoreRedirect": false,
-  "isMandatory": false
+  "minVersionCode": 2005,
+  "isMandatory": false,
+  "apkUrl": "https://github.com/Technologydevlopment/image-resizer-config/raw/main/app-release-arm64-v8a.apk",
+  "changelog": "• Stability Fallback: Implemented Binary JPEG Rescue for RAW files.\n• Engine Recovery: Native Heavy Rescue strategy to prevent crashes.\n• Cache Management: Aggressive 50MB deep-purge mechanism.\n• Android 14 Support: Fully compliant with target SDK 34.",
+  "sha256": "",
+  "isStoreRedirect": false
 }
