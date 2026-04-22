@@ -1,7 +1,7 @@
 {
-  "versionCode": 2007,
+  "versionCode": 2008,
   "versionName": "1.0.6",
-  "minVersionCode": 2007,
+  "minVersionCode": 2008,
   "isMandatory": true,
   "apkUrl": "https://github.com/Technologydevlopment/image-resizer-config/raw/main/app-release-arm64-v8a.apk",
   "changelog": "• Stability Fallback: Implemented Binary JPEG Rescue for RAW files.\n• Engine Recovery: Native Heavy Rescue strategy to prevent crashes.\n• Cache Management: Aggressive 50MB deep-purge mechanism.\n• Android 14 Support: Fully compliant with target SDK 34.",
