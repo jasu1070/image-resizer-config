@@ -1,0 +1,26 @@
+{
+  "name": "image-resizer-config",
+  "version": "1.0.0",
+  "description": "A premium, industrial-grade image resizing and processing utility built with Flutter and C++.",
+  "homepage": "https://jasu1070.github.io/image-resizer-config/",
+  "scripts": {
+    "predeploy": "git add . && git commit -m 'Predeploy commit' || true",
+    "deploy": "gh-pages -d .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasu1070/image-resizer-config.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jasu1070/image-resizer-config/issues"
+  },
+  "homepage": "https://github.com/jasu1070/image-resizer-config#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
