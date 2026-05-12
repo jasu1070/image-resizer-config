@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Image Resizer Pro - Learn how we protect your data.">
+    <title>Privacy Policy - Image Resizer Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .background-blobs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .blob {
+            position: absolute;
+            filter: blur(100px);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: move 20s infinite alternate;
+        }
+
+        .blob-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -100px;
+            right: -100px;
+        }
+
+        .blob-2 {
+            width: 500px;
+            height: 500px;
+            background: var(--secondary);
+            bottom: -150px;
+            left: -150px;
+            animation-delay: -5s;
+        }
+
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(100px, 50px) scale(1.1); }
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 60px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 20px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .logo-placeholder svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 16px;
+            background: linear-gradient(to bottom right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        li {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: var(--text-main);
+            border-bottom: 1px solid var(--primary);
+        }
+
+        .contact-box {
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .glass-card {
+                padding: 40px 24px;
+                border-radius: 24px;
+            }
+            h1 { font-size: 2.25rem; }
+            .container { margin: 30px auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <div class="glass-card">
+            <header>
+                <div class="logo-placeholder">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+                <h1>Privacy Policy</h1>
+                <div class="last-updated">Last Updated: May 12, 2026</div>
+            </header>
+
+            <section>
+                <h2>1. Introduction</h2>
+                <p>
+                    Image Resizer Pro ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our mobile application.
+                </p>
+                <p>
+                    <strong>Key Principle:</strong> Your images never leave your device. All processing is done locally to ensure maximum privacy and security.
+                </p>
+            </section>
+
+            <section>
+                <h2>2. Information We Collect</h2>
+                <p>
+                    We believe in data minimization. Here is a breakdown of what we do and do not collect:
+                </p>
+                <ul>
+                    <li><strong>Personal Data:</strong> We do not collect any personally identifiable information (PII) such as your name, email address, or phone number.</li>
+                    <li><strong>Image Data:</strong> We do not upload your images to any servers. All resizing, cropping, and compression happen entirely on your device.</li>
+                    <li><strong>Usage Data:</strong> We may collect anonymous usage statistics (e.g., which features are used most) to improve the app. This data cannot be traced back to you.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Permissions</h2>
+                <p>To function correctly, the App requires certain permissions:</p>
+                <ul>
+                    <li><strong>Storage/Media Access:</strong> Needed to read the images you want to resize and save the processed results back to your gallery.</li>
+                    <li><strong>Internet Access:</strong> Used for showing advertisements (in the free version) and processing subscription/pro feature verification.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Third-Party Services</h2>
+                <p>The App uses third-party services that may collect information used to identify you:</p>
+                <ul>
+                    <li><strong>Google Play Services:</strong> For app functionality and updates.</li>
+                    <li><strong>AdMob:</strong> For displaying advertisements. You can manage your ad preferences in your Google Account settings.</li>
+                    <li><strong>Firebase Analytics:</strong> For anonymous crash reporting and usage analysis.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Children's Privacy</h2>
+                <p>
+                    These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.
+                </p>
+            </section>
+
+            <section>
+                <h2>6. Changes to This Policy</h2>
+                <p>
+                    We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.
+                </p>
+            </section>
+
+            <div class="contact-box">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:</p>
+                <a href="mailto:jasu1070@gmail.com">jasu1070@gmail.com</a>
+            </div>
+
+            <footer>
+                <p>&copy; 2026 Image Resizer Pro. All rights reserved.</p>
+                <p><a href="terms-of-use.html">Terms of Use</a></p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
