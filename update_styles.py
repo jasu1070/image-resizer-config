@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Refund Policy for Image Resizer Pro">
-    <title>Refund Policy - Image Resizer Pro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
+import os
+import re
+
+new_style = """<style>
         :root {
             --primary: #FFB300;
             --primary-dark: #F59E0B;
@@ -94,48 +87,18 @@
         footer p { margin-bottom: 8px; font-size: 0.9rem; }
 
         @media (max-width: 768px) { .glass-card { padding: 30px 20px; } h1 { font-size: 2rem; } .container { margin: 20px auto; } }
-    </style>
-</head>
-<body>
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
+    </style>"""
 
-    <div class="container">
-        <div class="glass-card">
-            <header>
-                <div class="logo-placeholder">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-                </div>
-                <h1>Refund Policy</h1>
-                <div class="last-updated">Last Updated: May 12, 2026</div>
-            </header>
+files = ['privacy-policy.html', 'terms-of-use.html', 'refund-policy.html', 'subscription-terms.html', 'contact-support.html']
 
-            <section>
-                <h2>1. Google Play Store Refunds</h2>
-                <p>Because Image Resizer Pro uses Google Play's billing system, all refunds are subject to Google Play's refund policies. In most cases, if you request a refund within 48 hours of your purchase, Google will grant it immediately.</p>
-                <ul>
-                    <li>You can request a refund directly through your Google Play account history.</li>
-                    <li>If it has been more than 48 hours, refunds are granted at Google's discretion or you can contact us directly.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>2. Exceptional Circumstances</h2>
-                <p>If you miss the 48-hour window but have experienced a major technical issue preventing you from using the Pro features, please contact our support team. We review these cases individually and may be able to authorize a manual refund.</p>
-            </section>
-
-            <div class="contact-box">
-                <h2>Request a Refund</h2>
-                <p>If you need help with a refund, please contact us with your Google Play Order ID:</p>
-                <a href="mailto:jasu1070@gmail.com">jasu1070@gmail.com</a>
-            </div>
-
-            <footer>
-                <p>&copy; 2026 Image Resizer Pro. All rights reserved.</p>
-            </footer>
-        </div>
-    </div>
-</body>
-</html>
+for f in files:
+    path = os.path.join(r"c:\Users\jashv\image-resizer-config", f)
+    with open(path, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    # Replace everything between <style> and </style>
+    new_content = re.sub(r'<style>.*?</style>', new_style, content, flags=re.DOTALL)
+    
+    with open(path, 'w', encoding='utf-8') as file:
+        file.write(new_content)
+    print(f"Updated {f}")
