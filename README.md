@@ -61,3 +61,10 @@ Experience the ultimate in image processing with our fine-tuned industrial tools
 }
 ```
 
+## 📜 Legal & Support
+
+- [Privacy Policy](https://jasu1070.github.io/image-resizer-config/privacy-policy.html)
+- [Terms of Use](https://jasu1070.github.io/image-resizer-config/terms-of-use.html)
+- [Refund Policy](https://jasu1070.github.io/image-resizer-config/refund-policy.html)
+- [Subscription Terms](https://jasu1070.github.io/image-resizer-config/subscription-terms.html)
+- [Contact Support](https://jasu1070.github.io/image-resizer-config/contact-support.html)
