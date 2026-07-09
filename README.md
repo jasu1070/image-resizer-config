@@ -1,12 +1,12 @@
-# Image Resizer Pro
+# image resizer
 
 A premium, industrial-grade image resizing and processing utility built with Flutter and C++.
 
-![Image Resizer Pro Hero](assets/screens/IMG_20260327_143208.jpg)
+![image resizer Hero](assets/screens/IMG_20260327_143208.jpg)
 
 ## 🛡️ Security & Privacy (Local-First)
 
-**Image Resizer Pro** is designed with a "Local-First" architecture:
+**image resizer** is designed with a "Local-First" architecture:
 - **100% On-Device**: All image processing happens locally. No images are ever uploaded to any server.
 - **Zero Tracking**: We do not collect any personal data or usage analytics.
 For support or feedback, please contact: **jasu1070@gmail.com**
@@ -18,9 +18,9 @@ For more details, see our [Security Policy](SECURITY.md) and our in-app [Privacy
 
 This project uses a high-performance C++ engine for image processing to ensure speed and precision.
 
-# Image Resizer Pro: Cloud Config Repository
+# image resizer: Cloud Config Repository
 
-This repository hosts the official update configurations for the **Image Resizer Pro** application by **TECHNOLOGY DEVELOPMENTS**.
+This repository hosts the official update configurations for the **image resizer** application by **Shravas Digital**.
 
 > [!NOTE]
 > This is a configuration-only repository. The application source code is private and protected for security reasons.
