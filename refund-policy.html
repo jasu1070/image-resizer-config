@@ -24,7 +24,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--bg-gradient);
+            background: #ffffff;
             color: var(--text-main);
             line-height: 1.7;
             overflow-x: hidden;
@@ -32,48 +32,14 @@
             position: relative;
         }
 
-        .background-blobs {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: -1;
-            overflow: hidden;
-            pointer-events: none;
-        }
-        .background-blobs::before, .background-blobs::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.5;
-            animation: float 20s infinite alternate ease-in-out;
-        }
-        .background-blobs::before {
-            background: var(--primary);
-            width: 400px; height: 400px;
-            top: -100px; left: -100px;
-        }
-        .background-blobs::after {
-            background: var(--primary-dark);
-            width: 500px; height: 500px;
-            bottom: -150px; right: -100px;
-            animation-delay: -5s;
-        }
-        @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(30px, 50px) scale(1.1); }
-            100% { transform: translate(-20px, 20px) scale(0.9); }
-        }
+        .background-blobs { display: none; }
 
         .container { max-width: 800px; margin: 40px auto; padding: 0 24px; }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 20px;
-            padding: 60px;
-            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05), 0 10px 15px -5px rgba(0, 0, 0, 0.02), inset 0 0 0 1px rgba(255,255,255,0.8);
+            background: #ffffff;
+            border: none;
+            padding: 40px 0;
             animation: fadeIn 0.5s ease-out;
         }
 
@@ -112,16 +78,16 @@
             font-size: 0.95rem; font-weight: 500;
         }
 
-        section { margin-bottom: 35px; }
+        section { margin-bottom: 45px; }
 
-        h2 { font-size: 1.4rem; font-weight: 700; color: var(--text-main); margin-top: 32px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; letter-spacing: -0.01em; }
-        h2::before { content: ''; width: 4px; height: 22px; background: linear-gradient(to bottom, var(--primary), var(--primary-dark)); border-radius: 4px; }
+        h2 { font-size: 1.8rem; font-weight: 800; color: #000000; margin-top: 48px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; letter-spacing: -0.02em; }
+        h2::before { content: ''; width: 6px; height: 26px; background: var(--primary); border-radius: 4px; }
 
-        p { color: var(--text-muted); margin-bottom: 18px; font-size: 1.05rem; line-height: 1.8; }
+        p { color: #4b5563; margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8; }
 
         ul { list-style: none; margin-bottom: 24px; }
-        li { color: var(--text-muted); margin-bottom: 12px; padding-left: 24px; position: relative; font-size: 1.05rem; line-height: 1.8; }
-        li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
+        li { color: #4b5563; margin-bottom: 14px; padding-left: 28px; position: relative; font-size: 1.05rem; line-height: 1.8; }
+        li::before { content: ''; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
 
         a { color: var(--primary-dark); text-decoration: none; font-weight: 600; position: relative; transition: color 0.2s ease; }
         a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0; background-color: var(--primary); transform-origin: bottom right; transition: transform 0.25s ease-out; }
