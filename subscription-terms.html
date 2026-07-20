@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #FFB300;
-            --primary-dark: #F59E0B;
-            --secondary: #4A3728;
-            --bg-gradient: #ffffff;
-            --text-main: #111827;
-            --text-muted: #374151;
-            --accent: #10b981;
-            --border-color: #e5e7eb;
+            --primary: #42A5F5;
+            --primary-dark: #1565C0;
+            --secondary: #0d47a1;
+            --bg-gradient: #f4f7fa;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --accent: #2196F3;
+            --border-color: #e2e8f0;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -29,19 +29,52 @@
             line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            position: relative;
         }
 
-        .background-blobs { display: none; }
+        .background-blobs {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .background-blobs::before, .background-blobs::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.5;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+        .background-blobs::before {
+            background: var(--primary);
+            width: 400px; height: 400px;
+            top: -100px; left: -100px;
+        }
+        .background-blobs::after {
+            background: var(--primary-dark);
+            width: 500px; height: 500px;
+            bottom: -150px; right: -100px;
+            animation-delay: -5s;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, 50px) scale(1.1); }
+            100% { transform: translate(-20px, 20px) scale(0.9); }
+        }
 
         .container { max-width: 800px; margin: 40px auto; padding: 0 24px; }
 
         .glass-card {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 50px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            animation: fadeIn 0.4s ease-out;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05), 0 10px 15px -5px rgba(0, 0, 0, 0.02), inset 0 0 0 1px rgba(255,255,255,0.8);
+            animation: fadeIn 0.5s ease-out;
         }
 
         @keyframes fadeIn {
@@ -49,46 +82,59 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        header { text-align: center; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid var(--border-color); }
+        header { text-align: left; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 2px solid var(--border-color); }
 
-        .logo-placeholder {
-            width: 70px; height: 70px;
-            background: var(--primary);
-            border-radius: 16px;
-            margin: 0 auto 20px;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 10px rgba(255, 179, 0, 0.3);
+        .brand-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 24px;
         }
 
-        .logo-placeholder svg { width: 34px; height: 34px; fill: white; }
+        .company-name {
+            display: block; font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);
+            text-transform: uppercase; letter-spacing: 0.05em;
+        }
+
+        .app-name {
+            display: block; font-size: 1.15rem; font-weight: 600; color: var(--text-muted);
+        }
 
         h1 {
-            font-size: 2.5rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 12px;
-            color: var(--text-main);
+            font-size: 2.6rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--text-main), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .last-updated {
             display: inline-block; color: var(--text-muted);
-            font-size: 0.9rem; font-weight: 500;
+            font-size: 0.95rem; font-weight: 500;
         }
 
         section { margin-bottom: 35px; }
 
-        h2 { font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-        h2::before { content: ''; width: 4px; height: 20px; background: var(--primary); border-radius: 4px; }
+        h2 { font-size: 1.4rem; font-weight: 700; color: var(--text-main); margin-top: 32px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; letter-spacing: -0.01em; }
+        h2::before { content: ''; width: 4px; height: 22px; background: linear-gradient(to bottom, var(--primary), var(--primary-dark)); border-radius: 4px; }
 
-        p { color: var(--text-muted); margin-bottom: 16px; font-size: 1.05rem; }
+        p { color: var(--text-muted); margin-bottom: 18px; font-size: 1.05rem; line-height: 1.8; }
 
-        ul { list-style: none; margin-bottom: 20px; }
-        li { color: var(--text-muted); margin-bottom: 10px; padding-left: 24px; position: relative; font-size: 1.05rem; }
-        li::before { content: '•'; position: absolute; left: 0; color: var(--primary); font-weight: bold; font-size: 1.2rem; line-height: 1.4; }
+        ul { list-style: none; margin-bottom: 24px; }
+        li { color: var(--text-muted); margin-bottom: 12px; padding-left: 24px; position: relative; font-size: 1.05rem; line-height: 1.8; }
+        li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
 
-        a { color: var(--primary-dark); text-decoration: none; font-weight: 600; transition: color 0.2s ease; border-bottom: 1px solid transparent; }
-        a:hover { color: var(--primary); border-bottom: 1px solid var(--primary); }
+        a { color: var(--primary-dark); text-decoration: none; font-weight: 600; position: relative; transition: color 0.2s ease; }
+        a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0; background-color: var(--primary); transform-origin: bottom right; transition: transform 0.25s ease-out; }
+        a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        a:hover { color: var(--primary); }
 
-        .contact-box { background: #f9fafb; border: 1px solid var(--border-color); padding: 30px; border-radius: 12px; margin-top: 40px; text-align: center; }
+        .contact-box { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; padding: 40px 30px; border-radius: 16px; margin-top: 50px; text-align: center; box-shadow: 0 10px 25px -5px rgba(21, 101, 192, 0.4); }
+        .contact-box h2 { color: #fff; justify-content: center; margin-bottom: 15px; margin-top: 0; }
         .contact-box h2::before { display: none; }
-        .contact-box h2 { justify-content: center; margin-bottom: 10px; }
+        .contact-box p { color: rgba(255,255,255,0.9); margin-bottom: 25px; }
+        .contact-box a { display: inline-block; background: #fff; color: var(--primary-dark); padding: 12px 28px; border-radius: 30px; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; }
+        .contact-box a::after { display: none; }
+        .contact-box a:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: var(--primary); }
 
         footer { margin-top: 50px; text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-bottom: 20px; border-top: 1px solid var(--border-color); padding-top: 30px; }
         footer p { margin-bottom: 8px; font-size: 0.9rem; }
@@ -105,8 +151,12 @@
     <div class="container">
         <div class="glass-card">
             <header>
-                <div class="logo-placeholder">
-                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h-2v5H6v2h2v5h2v-5h2v-2z"/></svg>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div class="brand-info">
+                        <span class="company-name">Shravas Digital</span>
+                        <span class="app-name">Shravas: image resizer & Fit</span>
+                    </div>
+                    <span style="background: rgba(33,150,243,0.1); color: var(--primary-dark); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">Legal</span>
                 </div>
                 <h1>Subscription Terms</h1>
                 <div class="last-updated">Last Updated: May 12, 2026</div>
