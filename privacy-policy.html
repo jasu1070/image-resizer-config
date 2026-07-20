@@ -3,316 +3,466 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for image resizer - Learn how we protect your data.">
-    <title>Privacy Policy - image resizer</title>
+    <meta name="description" content="Privacy Policy for Shravas: image resizer & Fit - Learn how we protect your data.">
+    <title>Privacy Policy - Shravas: image resizer & Fit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #42A5F5;
-            --primary-dark: #1565C0;
-            --secondary: #0d47a1;
-            --bg-gradient: #f4f7fa;
-            --text-main: #1e293b;
-            --text-muted: #475569;
-            --accent: #2196F3;
-            --border-color: #e2e8f0;
-        }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
             background: #ffffff;
-            color: var(--text-main);
+            color: #374151;
             line-height: 1.7;
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            position: relative;
         }
 
-        .background-blobs { display: none; }
-
-        .container { max-width: 800px; margin: 40px auto; padding: 0 24px; }
-
-        .glass-card {
-            background: #ffffff;
-            border: none;
-            padding: 40px 0;
-            animation: fadeIn 0.5s ease-out;
+        /* ── Top accent bar ── */
+        .top-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #42A5F5, #1E88E5, #42A5F5);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 48px 28px 60px;
         }
 
-        header { text-align: left; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 2px solid var(--border-color); }
+        /* ── Header ── */
+        .page-header {
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e5e7eb;
+        }
 
-        .brand-info {
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 28px;
+        }
+
+        .brand {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            margin-bottom: 24px;
+            gap: 2px;
         }
 
-        .company-name {
-            display: block; font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);
-            text-transform: uppercase; letter-spacing: 0.05em;
+        .brand-company {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #42A5F5;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
-        .app-name {
-            display: block; font-size: 1.15rem; font-weight: 600; color: var(--text-muted);
+        .brand-app {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #9ca3af;
         }
 
-        h1 {
-            font-size: 2.6rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 8px;
-            background: linear-gradient(135deg, var(--text-main), var(--primary-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .badge {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .page-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1E88E5;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 10px;
         }
 
         .last-updated {
-            display: inline-block; color: var(--text-muted);
-            font-size: 0.95rem; font-weight: 500;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            font-weight: 400;
         }
 
-        section { margin-bottom: 45px; }
+        /* ── Section cards ── */
+        .section-card {
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 14px;
+            padding: 32px 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s ease;
+        }
 
-        h2 { font-size: 1.8rem; font-weight: 800; color: #000000; margin-top: 48px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; letter-spacing: -0.02em; }
-        h2::before { content: ''; width: 6px; height: 26px; background: var(--primary); border-radius: 4px; }
+        .section-card:hover {
+            box-shadow: 0 4px 12px rgba(66,165,245,0.08);
+        }
 
-        p { color: #4b5563; margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8; }
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1E88E5;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        ul { list-style: none; margin-bottom: 24px; }
-        li { color: #4b5563; margin-bottom: 14px; padding-left: 28px; position: relative; font-size: 1.05rem; line-height: 1.8; }
-        li::before { content: ''; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
+        .section-title .num {
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 0.8rem;
+            font-weight: 700;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
 
-        a { color: var(--primary-dark); text-decoration: none; font-weight: 600; position: relative; transition: color 0.2s ease; }
-        a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0; background-color: var(--primary); transform-origin: bottom right; transition: transform 0.25s ease-out; }
-        a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-        a:hover { color: var(--primary); }
+        .section-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
 
-        .contact-box { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; padding: 40px 30px; border-radius: 16px; margin-top: 50px; text-align: center; box-shadow: 0 10px 25px -5px rgba(21, 101, 192, 0.4); }
-        .contact-box h2 { color: #fff; justify-content: center; margin-bottom: 15px; margin-top: 0; }
-        .contact-box h2::before { display: none; }
-        .contact-box p { color: rgba(255,255,255,0.9); margin-bottom: 25px; }
-        .contact-box a { display: inline-block; background: #fff; color: var(--primary-dark); padding: 12px 28px; border-radius: 30px; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; }
-        .contact-box a::after { display: none; }
-        .contact-box a:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: var(--primary); }
+        .section-card p:last-child {
+            margin-bottom: 0;
+        }
 
-        footer { margin-top: 50px; text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-bottom: 20px; border-top: 1px solid var(--border-color); padding-top: 30px; }
-        footer p { margin-bottom: 8px; font-size: 0.9rem; }
+        .section-card strong {
+            color: #374151;
+            font-weight: 600;
+        }
 
-        @media (max-width: 768px) { .glass-card { padding: 30px 20px; } h1 { font-size: 2rem; } .container { margin: 20px auto; } }
+        .sub-heading {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            padding-left: 2px;
+        }
+
+        /* ── Lists ── */
+        ul {
+            list-style: none;
+            margin: 10px 0 16px;
+            padding: 0;
+        }
+
+        li {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            background: #93c5fd;
+            border-radius: 50%;
+        }
+
+        /* ── Links ── */
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #1E88E5;
+            text-decoration: underline;
+        }
+
+        /* ── Contact CTA ── */
+        .contact-card {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 14px;
+            padding: 36px 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-card .section-title {
+            justify-content: center;
+            color: #1E88E5;
+        }
+
+        .contact-card p {
+            color: #6b7280;
+            margin-bottom: 18px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: #42A5F5;
+            color: #ffffff !important;
+            padding: 12px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none !important;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .contact-btn:hover {
+            background: #1E88E5;
+            transform: translateY(-1px);
+        }
+
+        /* ── Footer ── */
+        .page-footer {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 12px;
+        }
+
+        .page-footer p {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+
+        .page-footer a {
+            color: #93c5fd;
+            font-weight: 500;
+        }
+
+        .page-footer a:hover {
+            color: #42A5F5;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 640px) {
+            .container { padding: 28px 16px 40px; }
+            .page-title { font-size: 1.8rem; }
+            .section-card { padding: 24px 20px; }
+            .header-top { flex-direction: column; gap: 12px; }
+        }
     </style>
 </head>
 <body>
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
+    <div class="top-bar"></div>
 
     <div class="container">
-        <div class="glass-card">
-            <header>
-                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                    <div class="brand-info">
-                        <span class="company-name">Shravas Digital</span>
-                        <span class="app-name">Shravas: image resizer & Fit</span>
-                    </div>
-                    <span style="background: rgba(33,150,243,0.1); color: var(--primary-dark); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">Legal</span>
+        <header class="page-header">
+            <div class="header-top">
+                <div class="brand">
+                    <span class="brand-company">Shravas Digital</span>
+                    <span class="brand-app">Shravas: image resizer &amp; Fit</span>
                 </div>
-                <h1>Privacy Policy</h1>
-                <div class="last-updated">Last Updated: July 8, 2026</div>
-            </header>
+                <span class="badge">Legal</span>
+            </div>
+            <h1 class="page-title">Privacy Policy</h1>
+            <div class="last-updated">Last Updated: July 8, 2026</div>
+        </header>
 
-            <section>
-                <h2>1. Introduction</h2>
-                <p>Welcome to image resizer ("App").</p>
-                <p>image resizer is developed and operated by Shravas Digital.</p>
-                <p>Your privacy is important to us. This Privacy Policy explains what information is collected, how it is used, and the choices available to you when using the App.</p>
-                <p>Privacy is one of the core principles of image resizer. Unlike many image editing applications, your photos are processed entirely on your own device. We do not upload, access, analyze, store, or share your images through our servers.</p>
-                <p>By downloading or using the App, you acknowledge that you have read and understood this Privacy Policy.</p>
-            </section>
-
-            <section>
-                <h2>2. Information We Collect</h2>
-                <p>We are committed to collecting as little information as possible.</p>
-                <p><strong>Information We Do Not Collect</strong></p>
-                <p>We do not directly collect or store:</p>
-                <ul>
-                    <li>Your name</li>
-                    <li>Email address</li>
-                    <li>Phone number</li>
-                    <li>Postal address</li>
-                    <li>Government identification</li>
-                    <li>Contacts</li>
-                    <li>Camera recordings</li>
-                    <li>Microphone recordings</li>
-                    <li>Location information</li>
-                    <li>The photos or images you process</li>
-                    <li>The contents of your image files</li>
-                </ul>
-                <p>Because all image processing occurs locally on your device, we never receive your images.</p>
-                <p><strong>Technical Information</strong></p>
-                <p>Certain third-party services integrated into the App may automatically process limited technical information necessary to provide their services. Depending on your device and settings, this may include:</p>
-                <ul>
-                    <li>Device model</li>
-                    <li>Android version</li>
-                    <li>App version</li>
-                    <li>Anonymous application identifiers</li>
-                    <li>Advertising identifiers (where applicable)</li>
-                    <li>Purchase verification information</li>
-                    <li>Crash diagnostics</li>
-                    <li>Anonymous usage statistics</li>
-                </ul>
-                <p>This information does not include the content of your images.</p>
-            </section>
-
-            <section>
-                <h2>3. How Your Images Are Processed</h2>
-                <p>image resizer performs image processing entirely on your device.</p>
-                <p>Features including, but not limited to:</p>
-                <ul>
-                    <li>Image resizing</li>
-                    <li>Image compression</li>
-                    <li>Format conversion</li>
-                    <li>Image cropping</li>
-                    <li>Batch processing</li>
-                    <li>PDF creation</li>
-                    <li>Other editing features</li>
-                </ul>
-                <p>operate locally without uploading your images to our servers.</p>
-                <p>We cannot access, view, recover, or store your images because they never leave your device.</p>
-                <p><strong>Temporary Local Cache</strong></p>
-                <p>During processing — particularly for Batch Resize operations — the App may create temporary local cache copies of your images on your device. These cache copies are used solely to perform the requested processing task and are automatically cleared:</p>
-                <ul>
-                    <li>When a batch operation finishes,</li>
-                    <li>When you stop a processing task, or</li>
-                    <li>When the App is relaunched.</li>
-                </ul>
-                <p>You may also clear this cache manually at any time from within the App. These temporary copies never leave your device, are never accessible to us, and clearing them does not affect your original photos.</p>
-            </section>
-
-            <section>
-                <h2>4. Permissions</h2>
-                <p>Depending on the Android version and the features you use, the App may request the following permissions.</p>
-                <p><strong>Photos and Media</strong></p>
-                <p>Required to allow you to select images and save processed files.</p>
-                <p><strong>Notifications</strong></p>
-                <p>Used to display the progress and completion status of long-running processing tasks.</p>
-                <p><strong>Background Activity</strong></p>
-                <p>Large processing jobs may continue while the App is running in the background, subject to Android's battery optimization and device manufacturer restrictions.</p>
-                <p><strong>Internet</strong></p>
-                <p>Internet access is used only for services that require an online connection, including:</p>
-                <ul>
-                    <li>Google Play Billing</li>
-                    <li>RevenueCat subscription validation</li>
-                    <li>Google AdMob advertisements</li>
-                    <li>Firebase Analytics</li>
-                    <li>Google Play licensing</li>
-                    <li>App updates</li>
-                </ul>
-                <p>Internet access is never used to upload your photos for processing.</p>
-            </section>
-
-            <section>
-                <h2>5. Third-Party Services</h2>
-                <p>To provide certain features, the App uses trusted third-party service providers.</p>
-                <p><strong>Google Play Services</strong></p>
-                <p>Used for application distribution, licensing, billing, updates, and other Google Play functionality.</p>
-                <p><strong>RevenueCat</strong></p>
-                <p>RevenueCat manages and validates premium subscriptions and one-time purchases.</p>
-                <p>RevenueCat may process anonymous App User IDs and purchase receipts solely for subscription management.</p>
-                <p>RevenueCat never receives access to your images.</p>
-                <p><strong>Google AdMob</strong></p>
-                <p>The free version of the App displays advertisements using Google AdMob.</p>
-                <p>Google AdMob may collect advertising identifiers and device information to display, measure, and improve advertisements in accordance with Google's Privacy Policy.</p>
-                <p>You can manage advertising preferences through your Google Account and Android settings.</p>
-                <p><strong>Firebase Analytics</strong></p>
-                <p>Firebase Analytics helps us understand anonymous usage patterns, improve app performance, identify crashes, and enhance user experience.</p>
-                <p>Firebase Analytics does not receive the contents of your images.</p>
-            </section>
-
-            <section>
-                <h2>6. Data Retention</h2>
-                <p>Because your images are processed entirely on your device, we do not retain copies of your photos or processed files. Temporary local cache copies created during processing are automatically cleared as described in Section 3 and are never transmitted to us.</p>
-                <p>Any information processed by third-party providers is retained according to their own privacy policies and applicable legal requirements.</p>
-            </section>
-
-            <section>
-                <h2>7. Data Security</h2>
-                <p>Protecting your privacy is fundamental to image resizer.</p>
-                <p>Since image processing occurs locally on your device:</p>
-                <ul>
-                    <li>Your images are not uploaded to our servers.</li>
-                    <li>Your images are not stored by us.</li>
-                    <li>Your images are not shared with us.</li>
-                </ul>
-                <p>Although we take reasonable measures to use trusted service providers and secure application practices, no software or electronic communication can be guaranteed to be completely secure.</p>
-            </section>
-
-            <section>
-                <h2>8. Children's Privacy</h2>
-                <p>The App is not intended for children under the age of 13.</p>
-                <p>We do not knowingly collect personal information from children under 13.</p>
-                <p>If you believe that a child has provided personal information through the App or has made unauthorized purchases, please contact us so that appropriate action can be taken.</p>
-            </section>
-
-            <section>
-                <h2>9. International Data Transfers</h2>
-                <p>Some third-party service providers may process limited technical information on servers located outside your country of residence.</p>
-                <p>Those providers are responsible for handling such information in accordance with their own privacy policies and applicable data protection laws.</p>
-            </section>
-
-            <section>
-                <h2>10. Your Privacy Rights</h2>
-                <p>Depending on your location and applicable law, you may have rights regarding your personal information, including the right to:</p>
-                <ul>
-                    <li>Request information about personal data processing</li>
-                    <li>Request deletion where applicable</li>
-                    <li>Withdraw consent where processing is based on consent</li>
-                    <li>Manage advertising preferences through your Google Account</li>
-                    <li>Contact us regarding privacy-related questions</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>11. Changes to this Privacy Policy</h2>
-                <p>We may update this Privacy Policy from time to time to reflect changes in legal requirements, our practices, or App functionality.</p>
-                <p>When significant changes are made, we will update the Last Updated date shown at the top of this Privacy Policy and, where required by law, provide additional notice within the App.</p>
-            </section>
-
-            <section>
-                <h2>12. Third-Party Privacy Policies</h2>
-                <p>For additional information, please review the privacy policies of our service providers:</p>
-                <ul>
-                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
-                    <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">Google AdMob</a></li>
-                    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Analytics</a></li>
-                    <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat</a></li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>13. Contact Us</h2>
-                <p>If you have any questions, requests, or concerns regarding this Privacy Policy, please contact us:</p>
-                <p><strong>Email:</strong> <a href="mailto:jasu1070@gmail.com">jasu1070@gmail.com</a></p>
-            </section>
-
-            <section>
-                <h2>14. Terms of Use</h2>
-                <p>Your use of image resizer is also governed by our Terms of Use:</p>
-                <p><a href="terms-of-use.html">Terms of Use</a></p>
-            </section>
-
-            <footer>
-                <p>&copy; 2026 Shravas Digital. All rights reserved.</p>
-                <p><a href="terms-of-use.html">Terms of Use</a></p>
-            </footer>
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">1</span> Introduction</h2>
+            <p>Welcome to image resizer ("App").</p>
+            <p>image resizer is developed and operated by Shravas Digital.</p>
+            <p>Your privacy is important to us. This Privacy Policy explains what information is collected, how it is used, and the choices available to you when using the App.</p>
+            <p>Privacy is one of the core principles of image resizer. Unlike many image editing applications, your photos are processed entirely on your own device. We do not upload, access, analyze, store, or share your images through our servers.</p>
+            <p>By downloading or using the App, you acknowledge that you have read and understood this Privacy Policy.</p>
         </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">2</span> Information We Collect</h2>
+            <p>We are committed to collecting as little information as possible.</p>
+            <p class="sub-heading">Information We Do Not Collect</p>
+            <p>We do not directly collect or store:</p>
+            <ul>
+                <li>Your name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Postal address</li>
+                <li>Government identification</li>
+                <li>Contacts</li>
+                <li>Camera recordings</li>
+                <li>Microphone recordings</li>
+                <li>Location information</li>
+                <li>The photos or images you process</li>
+                <li>The contents of your image files</li>
+            </ul>
+            <p>Because all image processing occurs locally on your device, we never receive your images.</p>
+            <p class="sub-heading">Technical Information</p>
+            <p>Certain third-party services integrated into the App may automatically process limited technical information necessary to provide their services. Depending on your device and settings, this may include:</p>
+            <ul>
+                <li>Device model</li>
+                <li>Android version</li>
+                <li>App version</li>
+                <li>Anonymous application identifiers</li>
+                <li>Advertising identifiers (where applicable)</li>
+                <li>Purchase verification information</li>
+                <li>Crash diagnostics</li>
+                <li>Anonymous usage statistics</li>
+            </ul>
+            <p>This information does not include the content of your images.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">3</span> How Your Images Are Processed</h2>
+            <p>image resizer performs image processing entirely on your device.</p>
+            <p>Features including, but not limited to:</p>
+            <ul>
+                <li>Image resizing</li>
+                <li>Image compression</li>
+                <li>Format conversion</li>
+                <li>Image cropping</li>
+                <li>Batch processing</li>
+                <li>PDF creation</li>
+                <li>Other editing features</li>
+            </ul>
+            <p>operate locally without uploading your images to our servers.</p>
+            <p>We cannot access, view, recover, or store your images because they never leave your device.</p>
+            <p class="sub-heading">Temporary Local Cache</p>
+            <p>During processing — particularly for Batch Resize operations — the App may create temporary local cache copies of your images on your device. These cache copies are used solely to perform the requested processing task and are automatically cleared:</p>
+            <ul>
+                <li>When a batch operation finishes,</li>
+                <li>When you stop a processing task, or</li>
+                <li>When the App is relaunched.</li>
+            </ul>
+            <p>You may also clear this cache manually at any time from within the App. These temporary copies never leave your device, are never accessible to us, and clearing them does not affect your original photos.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">4</span> Permissions</h2>
+            <p>Depending on the Android version and the features you use, the App may request the following permissions.</p>
+            <p class="sub-heading">Photos and Media</p>
+            <p>Required to allow you to select images and save processed files.</p>
+            <p class="sub-heading">Notifications</p>
+            <p>Used to display the progress and completion status of long-running processing tasks.</p>
+            <p class="sub-heading">Background Activity</p>
+            <p>Large processing jobs may continue while the App is running in the background, subject to Android's battery optimization and device manufacturer restrictions.</p>
+            <p class="sub-heading">Internet</p>
+            <p>Internet access is used only for services that require an online connection, including:</p>
+            <ul>
+                <li>Google Play Billing</li>
+                <li>RevenueCat subscription validation</li>
+                <li>Google AdMob advertisements</li>
+                <li>Firebase Analytics</li>
+                <li>Google Play licensing</li>
+                <li>App updates</li>
+            </ul>
+            <p>Internet access is never used to upload your photos for processing.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">5</span> Third-Party Services</h2>
+            <p>To provide certain features, the App uses trusted third-party service providers.</p>
+            <p class="sub-heading">Google Play Services</p>
+            <p>Used for application distribution, licensing, billing, updates, and other Google Play functionality.</p>
+            <p class="sub-heading">RevenueCat</p>
+            <p>RevenueCat manages and validates premium subscriptions and one-time purchases.</p>
+            <p>RevenueCat may process anonymous App User IDs and purchase receipts solely for subscription management.</p>
+            <p>RevenueCat never receives access to your images.</p>
+            <p class="sub-heading">Google AdMob</p>
+            <p>The free version of the App displays advertisements using Google AdMob.</p>
+            <p>Google AdMob may collect advertising identifiers and device information to display, measure, and improve advertisements in accordance with Google's Privacy Policy.</p>
+            <p>You can manage advertising preferences through your Google Account and Android settings.</p>
+            <p class="sub-heading">Firebase Analytics</p>
+            <p>Firebase Analytics helps us understand anonymous usage patterns, improve app performance, identify crashes, and enhance user experience.</p>
+            <p>Firebase Analytics does not receive the contents of your images.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">6</span> Data Retention</h2>
+            <p>Because your images are processed entirely on your device, we do not retain copies of your photos or processed files. Temporary local cache copies created during processing are automatically cleared as described in Section 3 and are never transmitted to us.</p>
+            <p>Any information processed by third-party providers is retained according to their own privacy policies and applicable legal requirements.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">7</span> Data Security</h2>
+            <p>Protecting your privacy is fundamental to image resizer.</p>
+            <p>Since image processing occurs locally on your device:</p>
+            <ul>
+                <li>Your images are not uploaded to our servers.</li>
+                <li>Your images are not stored by us.</li>
+                <li>Your images are not shared with us.</li>
+            </ul>
+            <p>Although we take reasonable measures to use trusted service providers and secure application practices, no software or electronic communication can be guaranteed to be completely secure.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">8</span> Children's Privacy</h2>
+            <p>The App is not intended for children under the age of 13.</p>
+            <p>We do not knowingly collect personal information from children under 13.</p>
+            <p>If you believe that a child has provided personal information through the App or has made unauthorized purchases, please contact us so that appropriate action can be taken.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">9</span> International Data Transfers</h2>
+            <p>Some third-party service providers may process limited technical information on servers located outside your country of residence.</p>
+            <p>Those providers are responsible for handling such information in accordance with their own privacy policies and applicable data protection laws.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">10</span> Your Privacy Rights</h2>
+            <p>Depending on your location and applicable law, you may have rights regarding your personal information, including the right to:</p>
+            <ul>
+                <li>Request information about personal data processing</li>
+                <li>Request deletion where applicable</li>
+                <li>Withdraw consent where processing is based on consent</li>
+                <li>Manage advertising preferences through your Google Account</li>
+                <li>Contact us regarding privacy-related questions</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">11</span> Changes to this Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in legal requirements, our practices, or App functionality.</p>
+            <p>When significant changes are made, we will update the Last Updated date shown at the top of this Privacy Policy and, where required by law, provide additional notice within the App.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">12</span> Third-Party Privacy Policies</h2>
+            <p>For additional information, please review the privacy policies of our service providers:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+                <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">Google AdMob</a></li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Analytics</a></li>
+                <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-card">
+            <h2 class="section-title"><span class="num">13</span> Contact Us</h2>
+            <p>If you have any questions, requests, or concerns regarding this Privacy Policy, please reach out to us.</p>
+            <a href="mailto:jasu1070@gmail.com" class="contact-btn">jasu1070@gmail.com</a>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">14</span> Terms of Use</h2>
+            <p>Your use of image resizer is also governed by our <a href="terms-of-use.html">Terms of Use</a>.</p>
+        </div>
+
+        <footer class="page-footer">
+            <p>&copy; 2026 Shravas Digital. All rights reserved.</p>
+            <p><a href="terms-of-use.html">Terms of Use</a></p>
+        </footer>
     </div>
 </body>
 </html>

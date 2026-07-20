@@ -3,275 +3,403 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Terms of Use for image resizer - Our legal agreement for using the app.">
-    <title>Terms of Use - image resizer</title>
+    <meta name="description" content="Terms of Use for Shravas: image resizer & Fit.">
+    <title>Terms of Use - Shravas: image resizer & Fit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #42A5F5;
-            --primary-dark: #1565C0;
-            --secondary: #0d47a1;
-            --bg-gradient: #f4f7fa;
-            --text-main: #1e293b;
-            --text-muted: #475569;
-            --accent: #2196F3;
-            --border-color: #e2e8f0;
-        }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
             background: #ffffff;
-            color: var(--text-main);
+            color: #374151;
             line-height: 1.7;
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            position: relative;
         }
 
-        .background-blobs { display: none; }
-
-        .container { max-width: 800px; margin: 40px auto; padding: 0 24px; }
-
-        .glass-card {
-            background: #ffffff;
-            border: none;
-            padding: 40px 0;
-            animation: fadeIn 0.5s ease-out;
+        .top-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #42A5F5, #1E88E5, #42A5F5);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 48px 28px 60px;
         }
 
-        header { text-align: left; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 2px solid var(--border-color); }
+        .page-header {
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e5e7eb;
+        }
 
-        .brand-info {
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 28px;
+        }
+
+        .brand {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            margin-bottom: 24px;
+            gap: 2px;
         }
 
-        .company-name {
-            display: block; font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);
-            text-transform: uppercase; letter-spacing: 0.05em;
+        .brand-company {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #42A5F5;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
-        .app-name {
-            display: block; font-size: 1.15rem; font-weight: 600; color: var(--text-muted);
+        .brand-app {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #9ca3af;
         }
 
-        h1 {
-            font-size: 2.6rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 8px;
-            background: linear-gradient(135deg, var(--text-main), var(--primary-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .badge {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .page-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1E88E5;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 10px;
         }
 
         .last-updated {
-            display: inline-block; color: var(--text-muted);
-            font-size: 0.95rem; font-weight: 500;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            font-weight: 400;
         }
 
-        section { margin-bottom: 45px; }
+        .section-card {
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 14px;
+            padding: 32px 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s ease;
+        }
 
-        h2 { font-size: 1.8rem; font-weight: 800; color: #000000; margin-top: 48px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; letter-spacing: -0.02em; }
-        h2::before { content: ''; width: 6px; height: 26px; background: var(--primary); border-radius: 4px; }
+        .section-card:hover {
+            box-shadow: 0 4px 12px rgba(66,165,245,0.08);
+        }
 
-        p { color: #4b5563; margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8; }
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1E88E5;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        ul { list-style: none; margin-bottom: 24px; }
-        li { color: #4b5563; margin-bottom: 14px; padding-left: 28px; position: relative; font-size: 1.05rem; line-height: 1.8; }
-        li::before { content: ''; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
+        .section-title .num {
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 0.8rem;
+            font-weight: 700;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
 
-        a { color: var(--primary-dark); text-decoration: none; font-weight: 600; position: relative; transition: color 0.2s ease; }
-        a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0; background-color: var(--primary); transform-origin: bottom right; transition: transform 0.25s ease-out; }
-        a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-        a:hover { color: var(--primary); }
+        .section-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
 
-        .contact-box { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; padding: 40px 30px; border-radius: 16px; margin-top: 50px; text-align: center; box-shadow: 0 10px 25px -5px rgba(21, 101, 192, 0.4); }
-        .contact-box h2 { color: #fff; justify-content: center; margin-bottom: 15px; margin-top: 0; }
-        .contact-box h2::before { display: none; }
-        .contact-box p { color: rgba(255,255,255,0.9); margin-bottom: 25px; }
-        .contact-box a { display: inline-block; background: #fff; color: var(--primary-dark); padding: 12px 28px; border-radius: 30px; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; }
-        .contact-box a::after { display: none; }
-        .contact-box a:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: var(--primary); }
+        .section-card p:last-child { margin-bottom: 0; }
 
-        footer { margin-top: 50px; text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-bottom: 20px; border-top: 1px solid var(--border-color); padding-top: 30px; }
-        footer p { margin-bottom: 8px; font-size: 0.9rem; }
+        .section-card strong { color: #374151; font-weight: 600; }
 
-        @media (max-width: 768px) { .glass-card { padding: 30px 20px; } h1 { font-size: 2rem; } .container { margin: 20px auto; } }
+        .sub-heading {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            padding-left: 2px;
+        }
+
+        ul { list-style: none; margin: 10px 0 16px; padding: 0; }
+
+        li {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            background: #93c5fd;
+            border-radius: 50%;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #1E88E5;
+            text-decoration: underline;
+        }
+
+        .contact-card {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 14px;
+            padding: 36px 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-card .section-title {
+            justify-content: center;
+            color: #1E88E5;
+        }
+
+        .contact-card p {
+            color: #6b7280;
+            margin-bottom: 18px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: #42A5F5;
+            color: #ffffff !important;
+            padding: 12px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none !important;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .contact-btn:hover {
+            background: #1E88E5;
+            transform: translateY(-1px);
+        }
+
+        .page-footer {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 12px;
+        }
+
+        .page-footer p {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+
+        .page-footer a { color: #93c5fd; font-weight: 500; }
+        .page-footer a:hover { color: #42A5F5; }
+
+        @media (max-width: 640px) {
+            .container { padding: 28px 16px 40px; }
+            .page-title { font-size: 1.8rem; }
+            .section-card { padding: 24px 20px; }
+            .header-top { flex-direction: column; gap: 12px; }
+        }
     </style>
 </head>
 <body>
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
+    <div class="top-bar"></div>
 
     <div class="container">
-        <div class="glass-card">
-            <header>
-                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                    <div class="brand-info">
-                        <span class="company-name">Shravas Digital</span>
-                        <span class="app-name">Shravas: image resizer & Fit</span>
-                    </div>
-                    <span style="background: rgba(33,150,243,0.1); color: var(--primary-dark); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">Legal</span>
+        <header class="page-header">
+            <div class="header-top">
+                <div class="brand">
+                    <span class="brand-company">Shravas Digital</span>
+                    <span class="brand-app">Shravas: image resizer &amp; Fit</span>
                 </div>
-                <h1>Terms of Use</h1>
-                <div class="last-updated">Last Updated: July 8, 2026</div>
-            </header>
-
-            <section>
-                <h2>1. Agreement to Terms</h2>
-                <p>By downloading, installing, or using image resizer (the "App"), you ("User" or "you") agree to be legally bound by these Terms of Use ("Terms"). If you do not agree to these Terms in full, you must not download, install, or use the App. These Terms constitute a legally binding agreement between you and image resizer ("we," "our," or "us").</p>
-                <p>image resizer is developed and published by <strong>Shravas Digital</strong>. References to "we," "our," or "us" throughout these Terms refer to Shravas Digital.</p>
-            </section>
-
-            <section>
-                <h2>2. Eligibility</h2>
-                <p>You must be at least 13 years of age to use this App. If you are between 13 and the age of legal majority in your jurisdiction, you may only use the App under the supervision of a parent or legal guardian, who agrees to be bound by these Terms on your behalf, particularly for any Pro subscription purchases. By using the App, you represent and warrant that you meet these eligibility requirements. We reserve the right to refuse or terminate access to any user we reasonably believe does not meet these requirements.</p>
-            </section>
-
-            <section>
-                <h2>3. License Grant</h2>
-                <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download and use the App for your personal, non-commercial use on a device you own or control. This license does not permit you to reverse-engineer, decompile, disassemble, modify, or create derivative works of the App, except as permitted by applicable law.</p>
-            </section>
-
-            <section>
-                <h2>4. Intellectual Property</h2>
-                <p>All content, features, functionality, source code, design, trademarks, and logos of the App are owned by Shravas Digital (operating under the name "image resizer") or licensors thereof, and are protected by copyright, trademark, and other intellectual property laws worldwide. Nothing in these Terms transfers any ownership rights to you. Any unauthorized use of the App's intellectual property is strictly prohibited and may result in termination of your access and legal action.</p>
-            </section>
-
-            <section>
-                <h2>5. User-Generated Content & Image Processing</h2>
-                <p>The App processes your images locally on your device. We do not access, view, upload, collect, or store any of your images on our servers. You retain full ownership and copyright of any images you process using the App.</p>
-                <p><strong>You are solely and entirely responsible for:</strong></p>
-                <ul>
-                    <li>Ensuring you have the legal right to use, modify, resize, convert, and distribute any images you process using the App;</li>
-                    <li>Any content you process, including compliance with applicable copyright, privacy, and data protection laws; and</li>
-                    <li>Any consequences arising from your use of images processed through the App.</li>
-                </ul>
-                <p>We disclaim all liability for copyright infringement, privacy violations, or any illegal or unauthorized content processed by you on your personal device. We have no ability to monitor, review, or control content processed locally on your device and undertake no obligation to do so.</p>
-            </section>
-
-            <section>
-                <h2>6. Prohibited Uses</h2>
-                <p>You agree not to use the App to:</p>
-                <ul>
-                    <li>Process, generate, or distribute any content that is illegal, infringing, defamatory, obscene, or that violates the rights of any third party, including child sexual abuse material in any form;</li>
-                    <li>Reverse-engineer, decompile, disassemble, or attempt to derive the source code of the App;</li>
-                    <li>Interfere with, disrupt, or attempt to gain unauthorized access to the App, its servers, or related systems;</li>
-                    <li>Use the App in any manner that violates applicable local, national, or international law; or</li>
-                    <li>Circumvent, disable, or otherwise interfere with any security-related features of the App, including Pro feature licensing checks.</li>
-                </ul>
-                <p>We reserve the right to investigate and take appropriate legal action, including suspension or termination of access and reporting to law enforcement, against anyone who violates this section.</p>
-            </section>
-
-            <section>
-                <h2>7. Pro Subscriptions & Purchases</h2>
-                <p>The App offers optional "Pro" features via monthly/annual subscriptions or a lifetime one-time purchase. This App is currently distributed exclusively through the Google Play Store, and our subscription infrastructure is securely managed through Google Play and validated by RevenueCat. If the App becomes available through additional app marketplaces in the future (such as Apple's App Store), purchases made through those marketplaces will be subject to that marketplace's applicable terms and billing policies in addition to these Terms.</p>
-                <ul>
-                    <li>Payments will be charged to your Google Account at confirmation of purchase.</li>
-                    <li>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.</li>
-                    <li>You can manage, upgrade, downgrade, or cancel your subscription at any time directly in your Google Play Store account settings.</li>
-                    <li>All purchases made through the App are also subject to the <a href="https://play.google.com/intl/en-us/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>.</li>
-                    <li>Refunds are subject to Google Play's standard refund policies, which you can review directly through your Google Play Store account. We do not directly process or guarantee refunds outside of the applicable marketplace's policies.</li>
-                    <li>We reserve the right to change subscription pricing or features at any time, with reasonable notice provided through the App or Google Play listing where required by law.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>8. Device Requirements & Performance</h2>
-                <p>The App performs all image processing, including batch operations on RAW and other large file formats, locally on your device rather than on remote servers. This gives you full privacy but also means the App's performance depends directly on your device's hardware capabilities.</p>
-                <p><strong>For the best experience, especially when using Batch Resize on multiple large or high-resolution images (including RAW/NEF files), we recommend:</strong></p>
-                <ul>
-                    <li>A minimum of <strong>4GB RAM</strong></li>
-                    <li>A minimum of <strong>64GB total device storage</strong>, with sufficient <strong>free storage</strong> available before starting a batch operation (processing large or numerous images requires temporary local space in addition to the space needed for final output files)</li>
-                </ul>
-                <p>Devices with lower specifications — such as 2–3GB RAM or limited/near-full storage — may experience slower processing speeds, temporary unresponsiveness during large batch jobs, incomplete operations, or automatic termination of background processing by the device's operating system. This is a limitation of the device's available hardware resources rather than a defect in the App.</p>
-                <p>We are not responsible for processing delays, failures, or interruptions caused by insufficient device RAM, storage space, or by the operating system's own resource or battery management restricting background activity. If you experience performance issues, we recommend closing other running apps, freeing up storage space, and keeping the App open and active in the foreground during large batch operations, as noted in our in-app Help Guide.</p>
-            </section>
-
-            <section>
-                <h2>9. Disclaimer of Warranty</h2>
-                <p>THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE. WE DO NOT WARRANT THE ACCURACY, COMPLETENESS, OR RELIABILITY OF ANY OUTPUT PRODUCED BY THE APP, INCLUDING IMAGE QUALITY OR FILE SIZE ACCURACY.</p>
-            </section>
-
-            <section>
-                <h2>10. Limitation of Liability</h2>
-                <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL image resizer, ITS DEVELOPER(S), OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR LOSS OF GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OR INABILITY TO USE THE APP, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
-                <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL AGGREGATE LIABILITY TO YOU FOR ANY CLAIM ARISING FROM THESE TERMS OR YOUR USE OF THE APP SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID US, IF ANY, IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) TEN U.S. DOLLARS (USD $10).</p>
-                <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so some of the above limitations may not apply to you.</p>
-            </section>
-
-            <section>
-                <h2>11. Indemnification</h2>
-                <p>You agree to indemnify, defend, and hold harmless image resizer, its developer(s), and affiliates from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising out of or in any way connected with: (a) your use or misuse of the App; (b) your violation of these Terms; (c) your violation of any third-party right, including intellectual property or privacy rights; or (d) any content you process, generate, or distribute using the App.</p>
-            </section>
-
-            <section>
-                <h2>12. App Updates & Availability</h2>
-                <p>We may from time to time release updates to the App to add features, improve performance, fix bugs, or address security issues. We may also modify, suspend, or discontinue any feature or functionality of the App, in whole or in part, at any time, with or without notice. We are not obligated to maintain, support, or continue offering any particular version, feature, or functionality of the App indefinitely.</p>
-            </section>
-
-            <section>
-                <h2>13. Force Majeure</h2>
-                <p>We shall not be liable for any failure or delay in performance under these Terms resulting from causes beyond our reasonable control, including but not limited to acts of God, natural disasters, internet or telecommunications outages, changes to third-party platforms or operating systems (including Android OS or Google Play), government actions, or other events outside our reasonable control.</p>
-            </section>
-
-            <section>
-                <h2>14. Termination</h2>
-                <p>We reserve the right to suspend or terminate your access to the App at any time, without prior notice, for conduct that we believe violates these Terms, is harmful to other users, infringes third-party rights, or is fraudulent or illegal. You may stop using the App at any time by uninstalling it from your device. Provisions of these Terms that by their nature should survive termination — including but not limited to Intellectual Property, Device Requirements & Performance, Disclaimer of Warranty, Limitation of Liability, Indemnification, and Governing Law — shall survive any termination of these Terms.</p>
-            </section>
-
-            <section>
-                <h2>15. Export Compliance</h2>
-                <p>You agree to comply with all applicable export and re-export control laws and regulations, including those of the country in which you reside, in connection with your use of the App.</p>
-            </section>
-
-            <section>
-                <h2>16. Changes to These Terms</h2>
-                <p>We may update these Terms from time to time to reflect changes in the App, our practices, or legal requirements. Material changes will be reflected by an updated "Last Updated" date at the top of this page, and where required by law, we will provide additional notice through the App. Your continued use of the App after changes are posted constitutes your binding acceptance of the revised Terms.</p>
-            </section>
-
-            <section>
-                <h2>17. Dispute Resolution</h2>
-                <p>We encourage you to first contact us at the email below to resolve any dispute informally. If a dispute cannot be resolved informally within thirty (30) days, both parties agree that any such dispute shall be resolved through the courts of competent jurisdiction identified in Section 18, and both parties waive any right to a jury trial or to participate in a class action, to the fullest extent permitted by applicable law.</p>
-            </section>
-
-            <section>
-                <h2>18. Governing Law</h2>
-                <p>These Terms shall be governed and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law provisions. This App is available for use globally; however, any disputes arising from these Terms will be handled exclusively under the laws and courts of India, except where prohibited by applicable local consumer protection law.</p>
-            </section>
-
-            <section>
-                <h2>19. Severability</h2>
-                <p>If any provision of these Terms is found to be unenforceable or invalid under applicable law, that provision shall be limited or eliminated to the minimum extent necessary so that the remaining Terms remain in full force and effect.</p>
-            </section>
-
-            <section>
-                <h2>20. Entire Agreement</h2>
-                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and image resizer regarding your use of the App, and supersede any prior agreements or understandings, whether written or oral.</p>
-            </section>
-
-            <div class="contact-box">
-                <h2>Questions?</h2>
-                <p>If you have any questions about these Terms, please contact us at:</p>
-                <a href="mailto:jasu1070@gmail.com">jasu1070@gmail.com</a>
+                <span class="badge">Legal</span>
             </div>
+            <h1 class="page-title">Terms of Use</h1>
+            <div class="last-updated">Last Updated: July 8, 2026</div>
+        </header>
 
-            <footer>
-                <p>&copy; 2026 Shravas Digital. All rights reserved.</p>
-                <p><a href="privacy-policy.html">Privacy Policy</a></p>
-            </footer>
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">1</span> Agreement to Terms</h2>
+            <p>By downloading, installing, or using image resizer (the "App"), you ("User" or "you") agree to be legally bound by these Terms of Use ("Terms"). If you do not agree to these Terms in full, you must not download, install, or use the App. These Terms constitute a legally binding agreement between you and image resizer ("we," "our," or "us").</p>
+            <p>image resizer is developed and published by <strong>Shravas Digital</strong>. References to "we," "our," or "us" throughout these Terms refer to Shravas Digital.</p>
         </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">2</span> Eligibility</h2>
+            <p>You must be at least 13 years of age to use this App. If you are between 13 and the age of legal majority in your jurisdiction, you may only use the App under the supervision of a parent or legal guardian, who agrees to be bound by these Terms on your behalf, particularly for any Pro subscription purchases. By using the App, you represent and warrant that you meet these eligibility requirements. We reserve the right to refuse or terminate access to any user we reasonably believe does not meet these requirements.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">3</span> License Grant</h2>
+            <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download and use the App for your personal, non-commercial use on a device you own or control. This license does not permit you to reverse-engineer, decompile, disassemble, modify, or create derivative works of the App, except as permitted by applicable law.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">4</span> Intellectual Property</h2>
+            <p>All content, features, functionality, source code, design, trademarks, and logos of the App are owned by Shravas Digital (operating under the name "image resizer") or licensors thereof, and are protected by copyright, trademark, and other intellectual property laws worldwide. Nothing in these Terms transfers any ownership rights to you. Any unauthorized use of the App's intellectual property is strictly prohibited and may result in termination of your access and legal action.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">5</span> User-Generated Content &amp; Image Processing</h2>
+            <p>The App processes your images locally on your device. We do not access, view, upload, collect, or store any of your images on our servers. You retain full ownership and copyright of any images you process using the App.</p>
+            <p class="sub-heading"><strong>You are solely and entirely responsible for:</strong></p>
+            <ul>
+                <li>Ensuring you have the legal right to use, modify, resize, convert, and distribute any images you process using the App;</li>
+                <li>Any content you process, including compliance with applicable copyright, privacy, and data protection laws; and</li>
+                <li>Any consequences arising from your use of images processed through the App.</li>
+            </ul>
+            <p>We disclaim all liability for copyright infringement, privacy violations, or any illegal or unauthorized content processed by you on your personal device. We have no ability to monitor, review, or control content processed locally on your device and undertake no obligation to do so.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">6</span> Prohibited Uses</h2>
+            <p>You agree not to use the App to:</p>
+            <ul>
+                <li>Process, generate, or distribute any content that is illegal, infringing, defamatory, obscene, or that violates the rights of any third party, including child sexual abuse material in any form;</li>
+                <li>Reverse-engineer, decompile, disassemble, or attempt to derive the source code of the App;</li>
+                <li>Interfere with, disrupt, or attempt to gain unauthorized access to the App, its servers, or related systems;</li>
+                <li>Use the App in any manner that violates applicable local, national, or international law; or</li>
+                <li>Circumvent, disable, or otherwise interfere with any security-related features of the App, including Pro feature licensing checks.</li>
+            </ul>
+            <p>We reserve the right to investigate and take appropriate legal action, including suspension or termination of access and reporting to law enforcement, against anyone who violates this section.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">7</span> Pro Subscriptions &amp; Purchases</h2>
+            <p>The App offers optional "Pro" features via monthly/annual subscriptions or a lifetime one-time purchase. This App is currently distributed exclusively through the Google Play Store, and our subscription infrastructure is securely managed through Google Play and validated by RevenueCat. If the App becomes available through additional app marketplaces in the future (such as Apple's App Store), purchases made through those marketplaces will be subject to that marketplace's applicable terms and billing policies in addition to these Terms.</p>
+            <ul>
+                <li>Payments will be charged to your Google Account at confirmation of purchase.</li>
+                <li>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.</li>
+                <li>You can manage, upgrade, downgrade, or cancel your subscription at any time directly in your Google Play Store account settings.</li>
+                <li>All purchases made through the App are also subject to the <a href="https://play.google.com/intl/en-us/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>.</li>
+                <li>Refunds are subject to Google Play's standard refund policies, which you can review directly through your Google Play Store account. We do not directly process or guarantee refunds outside of the applicable marketplace's policies.</li>
+                <li>We reserve the right to change subscription pricing or features at any time, with reasonable notice provided through the App or Google Play listing where required by law.</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">8</span> Device Requirements &amp; Performance</h2>
+            <p>The App performs all image processing, including batch operations on RAW and other large file formats, locally on your device rather than on remote servers. This gives you full privacy but also means the App's performance depends directly on your device's hardware capabilities.</p>
+            <p class="sub-heading"><strong>For the best experience, especially when using Batch Resize on multiple large or high-resolution images (including RAW/NEF files), we recommend:</strong></p>
+            <ul>
+                <li>A minimum of <strong>4GB RAM</strong></li>
+                <li>A minimum of <strong>64GB total device storage</strong>, with sufficient <strong>free storage</strong> available before starting a batch operation (processing large or numerous images requires temporary local space in addition to the space needed for final output files)</li>
+            </ul>
+            <p>Devices with lower specifications — such as 2–3GB RAM or limited/near-full storage — may experience slower processing speeds, temporary unresponsiveness during large batch jobs, incomplete operations, or automatic termination of background processing by the device's operating system. This is a limitation of the device's available hardware resources rather than a defect in the App.</p>
+            <p>We are not responsible for processing delays, failures, or interruptions caused by insufficient device RAM, storage space, or by the operating system's own resource or battery management restricting background activity. If you experience performance issues, we recommend closing other running apps, freeing up storage space, and keeping the App open and active in the foreground during large batch operations, as noted in our in-app Help Guide.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">9</span> Disclaimer of Warranty</h2>
+            <p>THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE. WE DO NOT WARRANT THE ACCURACY, COMPLETENESS, OR RELIABILITY OF ANY OUTPUT PRODUCED BY THE APP, INCLUDING IMAGE QUALITY OR FILE SIZE ACCURACY.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">10</span> Limitation of Liability</h2>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL image resizer, ITS DEVELOPER(S), OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR LOSS OF GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OR INABILITY TO USE THE APP, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL AGGREGATE LIABILITY TO YOU FOR ANY CLAIM ARISING FROM THESE TERMS OR YOUR USE OF THE APP SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID US, IF ANY, IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) TEN U.S. DOLLARS (USD $10).</p>
+            <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so some of the above limitations may not apply to you.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">11</span> Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless image resizer, its developer(s), and affiliates from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising out of or in any way connected with: (a) your use or misuse of the App; (b) your violation of these Terms; (c) your violation of any third-party right, including intellectual property or privacy rights; or (d) any content you process, generate, or distribute using the App.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">12</span> App Updates &amp; Availability</h2>
+            <p>We may from time to time release updates to the App to add features, improve performance, fix bugs, or address security issues. We may also modify, suspend, or discontinue any feature or functionality of the App, in whole or in part, at any time, with or without notice. We are not obligated to maintain, support, or continue offering any particular version, feature, or functionality of the App indefinitely.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">13</span> Force Majeure</h2>
+            <p>We shall not be liable for any failure or delay in performance under these Terms resulting from causes beyond our reasonable control, including but not limited to acts of God, natural disasters, internet or telecommunications outages, changes to third-party platforms or operating systems (including Android OS or Google Play), government actions, or other events outside our reasonable control.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">14</span> Termination</h2>
+            <p>We reserve the right to suspend or terminate your access to the App at any time, without prior notice, for conduct that we believe violates these Terms, is harmful to other users, infringes third-party rights, or is fraudulent or illegal. You may stop using the App at any time by uninstalling it from your device. Provisions of these Terms that by their nature should survive termination — including but not limited to Intellectual Property, Device Requirements &amp; Performance, Disclaimer of Warranty, Limitation of Liability, Indemnification, and Governing Law — shall survive any termination of these Terms.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">15</span> Export Compliance</h2>
+            <p>You agree to comply with all applicable export and re-export control laws and regulations, including those of the country in which you reside, in connection with your use of the App.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">16</span> Changes to These Terms</h2>
+            <p>We may update these Terms from time to time to reflect changes in the App, our practices, or legal requirements. Material changes will be reflected by an updated "Last Updated" date at the top of this page, and where required by law, we will provide additional notice through the App. Your continued use of the App after changes are posted constitutes your binding acceptance of the revised Terms.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">17</span> Dispute Resolution</h2>
+            <p>We encourage you to first contact us at the email below to resolve any dispute informally. If a dispute cannot be resolved informally within thirty (30) days, both parties agree that any such dispute shall be resolved through the courts of competent jurisdiction identified in Section 18, and both parties waive any right to a jury trial or to participate in a class action, to the fullest extent permitted by applicable law.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">18</span> Governing Law</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law provisions. This App is available for use globally; however, any disputes arising from these Terms will be handled exclusively under the laws and courts of India, except where prohibited by applicable local consumer protection law.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">19</span> Severability</h2>
+            <p>If any provision of these Terms is found to be unenforceable or invalid under applicable law, that provision shall be limited or eliminated to the minimum extent necessary so that the remaining Terms remain in full force and effect.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">20</span> Entire Agreement</h2>
+            <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and image resizer regarding your use of the App, and supersede any prior agreements or understandings, whether written or oral.</p>
+        </div>
+
+        <div class="contact-card">
+            <h2 class="section-title">Questions?</h2>
+            <p>If you have any questions about these Terms, please contact us at:</p>
+            <a href="mailto:jasu1070@gmail.com" class="contact-btn">jasu1070@gmail.com</a>
+        </div>
+
+        <footer class="page-footer">
+            <p>&copy; 2026 Shravas Digital. All rights reserved.</p>
+            <p><a href="privacy-policy.html">Privacy Policy</a></p>
+        </footer>
     </div>
 </body>
 </html>

@@ -3,155 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Refund Policy for image resizer">
-    <title>Refund Policy - image resizer</title>
+    <meta name="description" content="Refund Policy for Shravas: image resizer & Fit.">
+    <title>Refund Policy - Shravas: image resizer & Fit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #42A5F5;
-            --primary-dark: #1565C0;
-            --secondary: #0d47a1;
-            --bg-gradient: #f4f7fa;
-            --text-main: #1e293b;
-            --text-muted: #475569;
-            --accent: #2196F3;
-            --border-color: #e2e8f0;
-        }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
             background: #ffffff;
-            color: var(--text-main);
+            color: #374151;
             line-height: 1.7;
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            position: relative;
         }
 
-        .background-blobs { display: none; }
-
-        .container { max-width: 800px; margin: 40px auto; padding: 0 24px; }
-
-        .glass-card {
-            background: #ffffff;
-            border: none;
-            padding: 40px 0;
-            animation: fadeIn 0.5s ease-out;
+        .top-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #42A5F5, #1E88E5, #42A5F5);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 48px 28px 60px;
         }
 
-        header { text-align: left; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 2px solid var(--border-color); }
+        .page-header {
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e5e7eb;
+        }
 
-        .brand-info {
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 28px;
+        }
+
+        .brand {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            margin-bottom: 24px;
+            gap: 2px;
         }
 
-        .company-name {
-            display: block; font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);
-            text-transform: uppercase; letter-spacing: 0.05em;
+        .brand-company {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #42A5F5;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
-        .app-name {
-            display: block; font-size: 1.15rem; font-weight: 600; color: var(--text-muted);
+        .brand-app {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #9ca3af;
         }
 
-        h1 {
-            font-size: 2.6rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 8px;
-            background: linear-gradient(135deg, var(--text-main), var(--primary-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .badge {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .page-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1E88E5;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 10px;
         }
 
         .last-updated {
-            display: inline-block; color: var(--text-muted);
-            font-size: 0.95rem; font-weight: 500;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            font-weight: 400;
         }
 
-        section { margin-bottom: 45px; }
+        .section-card {
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 14px;
+            padding: 32px 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s ease;
+        }
 
-        h2 { font-size: 1.8rem; font-weight: 800; color: #000000; margin-top: 48px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; letter-spacing: -0.02em; }
-        h2::before { content: ''; width: 6px; height: 26px; background: var(--primary); border-radius: 4px; }
+        .section-card:hover {
+            box-shadow: 0 4px 12px rgba(66,165,245,0.08);
+        }
 
-        p { color: #4b5563; margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8; }
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1E88E5;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        ul { list-style: none; margin-bottom: 24px; }
-        li { color: #4b5563; margin-bottom: 14px; padding-left: 28px; position: relative; font-size: 1.05rem; line-height: 1.8; }
-        li::before { content: ''; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
+        .section-title .num {
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 0.8rem;
+            font-weight: 700;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
 
-        a { color: var(--primary-dark); text-decoration: none; font-weight: 600; position: relative; transition: color 0.2s ease; }
-        a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0; background-color: var(--primary); transform-origin: bottom right; transition: transform 0.25s ease-out; }
-        a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-        a:hover { color: var(--primary); }
+        .section-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
 
-        .contact-box { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; padding: 40px 30px; border-radius: 16px; margin-top: 50px; text-align: center; box-shadow: 0 10px 25px -5px rgba(21, 101, 192, 0.4); }
-        .contact-box h2 { color: #fff; justify-content: center; margin-bottom: 15px; margin-top: 0; }
-        .contact-box h2::before { display: none; }
-        .contact-box p { color: rgba(255,255,255,0.9); margin-bottom: 25px; }
-        .contact-box a { display: inline-block; background: #fff; color: var(--primary-dark); padding: 12px 28px; border-radius: 30px; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; }
-        .contact-box a::after { display: none; }
-        .contact-box a:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: var(--primary); }
+        .section-card p:last-child { margin-bottom: 0; }
 
-        footer { margin-top: 50px; text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-bottom: 20px; border-top: 1px solid var(--border-color); padding-top: 30px; }
-        footer p { margin-bottom: 8px; font-size: 0.9rem; }
+        .section-card strong { color: #374151; font-weight: 600; }
 
-        @media (max-width: 768px) { .glass-card { padding: 30px 20px; } h1 { font-size: 2rem; } .container { margin: 20px auto; } }
+        ul { list-style: none; margin: 10px 0 16px; padding: 0; }
+
+        li {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            background: #93c5fd;
+            border-radius: 50%;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #1E88E5;
+            text-decoration: underline;
+        }
+
+        .contact-card {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 14px;
+            padding: 36px 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-card .section-title {
+            justify-content: center;
+            color: #1E88E5;
+        }
+
+        .contact-card p {
+            color: #6b7280;
+            margin-bottom: 18px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: #42A5F5;
+            color: #ffffff !important;
+            padding: 12px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none !important;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .contact-btn:hover {
+            background: #1E88E5;
+            transform: translateY(-1px);
+        }
+
+        .page-footer {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 12px;
+        }
+
+        .page-footer p {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+
+        .page-footer a { color: #93c5fd; font-weight: 500; }
+        .page-footer a:hover { color: #42A5F5; }
+
+        @media (max-width: 640px) {
+            .container { padding: 28px 16px 40px; }
+            .page-title { font-size: 1.8rem; }
+            .section-card { padding: 24px 20px; }
+            .header-top { flex-direction: column; gap: 12px; }
+        }
     </style>
 </head>
 <body>
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
+    <div class="top-bar"></div>
 
     <div class="container">
-        <div class="glass-card">
-            <header>
-                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                    <div class="brand-info">
-                        <span class="company-name">Shravas Digital</span>
-                        <span class="app-name">Shravas: image resizer & Fit</span>
-                    </div>
-                    <span style="background: rgba(33,150,243,0.1); color: var(--primary-dark); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">Legal</span>
+        <header class="page-header">
+            <div class="header-top">
+                <div class="brand">
+                    <span class="brand-company">Shravas Digital</span>
+                    <span class="brand-app">Shravas: image resizer &amp; Fit</span>
                 </div>
-                <h1>Refund Policy</h1>
-                <div class="last-updated">Last Updated: May 12, 2026</div>
-            </header>
-
-            <section>
-                <h2>1. Google Play Store Refunds</h2>
-                <p>Because image resizer uses Google Play's billing system, all refunds are subject to Google Play's refund policies. In most cases, if you request a refund within 48 hours of your purchase, Google will grant it immediately.</p>
-                <ul>
-                    <li>You can request a refund directly through your Google Play account history.</li>
-                    <li>If it has been more than 48 hours, refunds are granted at Google's discretion or you can contact us directly.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>2. Exceptional Circumstances</h2>
-                <p>If you miss the 48-hour window but have experienced a major technical issue preventing you from using the Pro features, please contact our support team. We review these cases individually and may be able to authorize a manual refund.</p>
-            </section>
-
-            <div class="contact-box">
-                <h2>Request a Refund</h2>
-                <p>If you need help with a refund, please contact us with your Google Play Order ID:</p>
-                <a href="mailto:jasu1070@gmail.com">jasu1070@gmail.com</a>
+                <span class="badge">Legal</span>
             </div>
+            <h1 class="page-title">Refund Policy</h1>
+            <div class="last-updated">Last Updated: May 12, 2026</div>
+        </header>
 
-            <footer>
-                <p>&copy; 2026 image resizer. All rights reserved.</p>
-            </footer>
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">1</span> Google Play Store Refunds</h2>
+            <p>Because image resizer uses Google Play's billing system, all refunds are subject to Google Play's refund policies. In most cases, if you request a refund within 48 hours of your purchase, Google will grant it immediately.</p>
+            <ul>
+                <li>You can request a refund directly through your Google Play account history.</li>
+                <li>If it has been more than 48 hours, refunds are granted at Google's discretion or you can contact us directly.</li>
+            </ul>
         </div>
+
+        <div class="section-card">
+            <h2 class="section-title"><span class="num">2</span> Exceptional Circumstances</h2>
+            <p>If you miss the 48-hour window but have experienced a major technical issue preventing you from using the Pro features, please contact our support team. We review these cases individually and may be able to authorize a manual refund.</p>
+        </div>
+
+        <div class="contact-card">
+            <h2 class="section-title">Request a Refund</h2>
+            <p>If you need help with a refund, please contact us with your Google Play Order ID:</p>
+            <a href="mailto:jasu1070@gmail.com" class="contact-btn">jasu1070@gmail.com</a>
+        </div>
+
+        <footer class="page-footer">
+            <p>&copy; 2026 Shravas Digital. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
