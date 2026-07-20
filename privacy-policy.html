@@ -34,60 +34,55 @@
         /* ── Header ── */
         .page-header {
             margin-bottom: 48px;
-            padding-bottom: 32px;
+        }
+
+        .brand-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 16px;
             border-bottom: 1px solid #e5e7eb;
-        }
-
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 28px;
-        }
-
-        .brand {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
+            margin-bottom: 24px;
         }
 
         .brand-company {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #42A5F5;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #9ca3af;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
+        }
+
+        .brand-dot {
+            width: 4px;
+            height: 4px;
+            background: #d1d5db;
+            border-radius: 50%;
         }
 
         .brand-app {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 500;
-            color: #9ca3af;
+            color: #42A5F5;
         }
 
-        .badge {
-            background: #eff6ff;
-            color: #2563eb;
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+        .title-block {
+            padding-bottom: 28px;
+            border-bottom: 2px solid #42A5F5;
         }
 
         .page-title {
-            font-size: 2.4rem;
+            font-size: 2.6rem;
             font-weight: 800;
             color: #1E88E5;
             letter-spacing: -0.03em;
-            line-height: 1.2;
-            margin-bottom: 10px;
+            line-height: 1.15;
+            margin-bottom: 8px;
         }
 
         .last-updated {
-            font-size: 0.9rem;
-            color: #9ca3af;
+            font-size: 0.88rem;
+            color: #b0b8c4;
             font-weight: 400;
         }
 
@@ -269,15 +264,15 @@
 
     <div class="container">
         <header class="page-header">
-            <div class="header-top">
-                <div class="brand">
-                    <span class="brand-company">Shravas Digital</span>
-                    <span class="brand-app">Shravas: image resizer &amp; Fit</span>
-                </div>
-                <span class="badge">Legal</span>
+            <div class="brand-bar">
+                <span class="brand-company">Shravas Digital</span>
+                <span class="brand-dot"></span>
+                <span class="brand-app">Shravas: image resizer &amp; Fit</span>
             </div>
-            <h1 class="page-title">Privacy Policy</h1>
-            <div class="last-updated">Last Updated: July 8, 2026</div>
+            <div class="title-block">
+                <h1 class="page-title">Privacy Policy</h1>
+                <div class="last-updated">Last Updated: July 8, 2026</div>
+            </div>
         </header>
 
         <div class="section-card">
