@@ -53,7 +53,7 @@
       <h2>Frequently Asked Questions</h2>
 
       <h3>Q: Where is my SalaryMate data stored?</h3>
-      <p>A: SalaryMate uses a local-first architecture. Your salary, attendance, overtime, deductions, allowances, and expense records are stored locally on your device. They are not automatically uploaded to a cloud server.</p>
+      <p>A: SalaryMate uses a local-first architecture. Your salary, attendance, overtime, deductions, allowances, and expense records are stored locally on your device. They are not automatically uploaded to a SalaryMate cloud server.</p>
       <p>You can manually export your records as JSON backup files and restore them later using the app's local import/export functionality.</p>
 
       <h3>Q: How do I calculate Overtime (OT)?</h3>
@@ -78,7 +78,8 @@
       <p>A: SalaryMate stores primary records locally on your device. Uninstalling the app removes locally stored app data. Before uninstalling, export a JSON backup to preserve your records. Note that uninstalling does not cancel an active Google Play subscription.</p>
 
       <h3>Q: Does SalaryMate upload my salary or expense information?</h3>
-      <p>A: No. Salary, attendance, overtime, deductions, allowances, expense records, and related personal records are processed locally and are not transmitted to our servers. Firebase Analytics and Crashlytics receive anonymous usage/crash diagnostics, but SalaryMate is configured not to send salary figures, employee names, or attendance details in telemetry.</p>
+      <p>A: No. Salary, attendance, overtime, deductions, allowances, expense records, payslip contents, and related personal records are processed locally and are not transmitted to a SalaryMate cloud server.</p>
+      <p>SalaryMate uses Firebase Analytics and Firebase Crashlytics for app usage measurement and crash diagnostics. These services may receive app, installation, usage, crash, and diagnostic information as described in our Privacy Policy. SalaryMate is configured not to intentionally send salary figures, employee names, company names, expense details, attendance records, or other financial-record contents through its analytics events or crash-reporting logs.</p>
 
       <h3>Q: Does SalaryMate provide cloud backup?</h3>
       <p>A: No. SalaryMate currently uses local backup/export functionality rather than a cloud backup service. You can manually export your data to a JSON backup file and store or transfer it yourself.</p>
