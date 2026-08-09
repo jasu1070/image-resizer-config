@@ -4,7 +4,7 @@
   "description": "A premium, industrial-grade image resizing and processing utility built with Flutter and C++.",
   "homepage": "https://jasu1070.github.io/image-resizer-config/",
   "scripts": {
-    "predeploy": "git add . && git commit -m 'Predeploy commit' || true",
+    "predeploy": "git add .",
     "deploy": "gh-pages -d .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
