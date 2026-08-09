@@ -49,7 +49,7 @@
         <li>JSON backup data</li>
         <li>CSV and PDF exports</li>
       </ul>
-      <p>This information is processed locally by the app. SalaryMate does <strong>not</strong> transmit your salary amounts, attendance records, overtime records, expense records, payslip contents, or employee/company names to our servers.</p>
+      <p>This information is processed locally by the app. SalaryMate does <strong>not</strong> transmit your salary amounts, attendance records, overtime records, expense records, payslip contents, or employee/company names to Shravas Digital's servers. These records are not intentionally included in Firebase Analytics or Crashlytics telemetry.</p>
 
       <h2>3. Backup and File Export</h2>
       <p>SalaryMate allows you to manually export or restore your app data using supported local files.</p>
@@ -81,14 +81,17 @@
         <li>Stack traces</li>
         <li>Relevant application state</li>
         <li>Device and app information</li>
-        <li>Crashlytics installation identifiers</li>
-        <li>Firebase installation identifiers</li>
+        <li>Crashlytics installation UUID</li>
+        <li>Firebase Installation ID (FID)</li>
         <li>Other diagnostic information associated with a crash</li>
       </ul>
       <div class="highlight-box">
         SalaryMate does not intentionally place salary amounts, employee names, company names, expense descriptions, attendance records, or other financial record contents into Crashlytics logs, custom keys, user identifiers, or crash reports.
       </div>
-      <p>Firebase services may process information on Google's infrastructure and may use service providers/subprocessors as described in Google's applicable privacy documentation.</p>
+      <p>When Firebase Analytics is enabled, Crashlytics may also use Analytics breadcrumb logs to provide context about actions occurring immediately before a crash. SalaryMate is configured so that these events do not intentionally contain user-entered salary, attendance, expense, employee, company, or other financial-record contents.</p>
+
+      <h3>Data Sharing and Third-Party Processing</h3>
+      <p>SalaryMate does not sell personal information and does not intentionally share salary, attendance, overtime, expense, payslip, employee, or company information with third parties. Firebase Analytics and Firebase Crashlytics process the app, device, installation, usage, crash, and diagnostic information described above to provide analytics and crash-reporting services. Firebase may process this information on Google's infrastructure and according to Google's applicable service terms and privacy documentation.</p>
 
       <h2>5. Data Transmission and Security</h2>
       <p>SalaryMate's locally stored salary, attendance, overtime, expense, and payslip records are not automatically uploaded to a cloud server.</p>
