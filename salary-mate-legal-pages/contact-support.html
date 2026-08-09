@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact & Support - SalaryMate</title>
-  <meta name="description" content="SalaryMate Contact & Support - Customer care, FAQs, feature requests, and bug reports by Shravas Digital.">
+  <meta name="description" content="SalaryMate Contact & Support - Customer care, FAQs, subscription management, and bug reporting by Shravas Digital.">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
           <div class="meta-value"><a href="mailto:Jasu1070@gmail.com" style="color: var(--primary-color); text-decoration: none;">Jasu1070@gmail.com</a></div>
         </div>
         <div class="meta-item">
-          <div class="meta-label">Company</div>
+          <div class="meta-label">Publisher</div>
           <div class="meta-value">Shravas Digital</div>
         </div>
         <div class="meta-item">
@@ -52,26 +52,50 @@
     <div class="card">
       <h2>Frequently Asked Questions</h2>
 
-      <h3>Q: Where is my attendance data stored?</h3>
-      <p>A: Your data is stored securely on your local device using encrypted SharedPreferences. Nothing is uploaded to the cloud unless you manually trigger a backup export from Profile → Cloud Data Backup.</p>
+      <h3>Q: Where is my SalaryMate data stored?</h3>
+      <p>A: SalaryMate uses a local-first architecture. Your salary, attendance, overtime, deductions, allowances, and expense records are stored locally on your device. They are not automatically uploaded to a cloud server.</p>
+      <p>You can manually export your records as JSON backup files and restore them later using the app's local import/export functionality.</p>
 
       <h3>Q: How do I calculate Overtime (OT)?</h3>
-      <p>A: Configure your OT Rate per Hour in the Salary Configuration screen. When marking attendance, enter OT hours for each day. Your monthly OT earnings are automatically calculated and included in your estimated net salary.</p>
+      <p>A: Configure your OT rate per hour in the Salary Configuration screen. When recording attendance, enter the overtime hours for each applicable day. SalaryMate calculates your estimated monthly OT earnings and includes them in the applicable salary calculations.</p>
 
       <h3>Q: How can I restore my Pro subscription?</h3>
-      <p>A: Open Profile → Subscription & Plans and tap "Restore" in the upper right corner. This will reactivate your Pro features if you've previously purchased them.</p>
+      <p>A: Open <strong>Profile &rarr; Subscription & Plans</strong> and tap <strong>Restore</strong>. SalaryMate will check your Google Play purchase history and restore eligible Pro access associated with your Google account. Make sure you are signed in to Google Play with the account used for purchase.</p>
+
+      <h3>Q: How can I manage or cancel my Pro subscription?</h3>
+      <p>A: If you have an active Pro subscription, open <strong>Profile &rarr; Subscription & Plans</strong> and tap <strong>Manage</strong>. This opens Google Play's subscription management page. <br><em>Important: Uninstalling SalaryMate does not cancel your Google Play subscription. You must cancel through Google Play.</em></p>
 
       <h3>Q: How do I export reports as PDF or CSV?</h3>
-      <p>A: Go to the Reports tab → tap on any report type (Payslip, Attendance, Overtime, Statutory Ledger, or CSV). Tap "Save & Share" to save the file to your device's SalaryMate_Reports folder and open the share dialog.</p>
+      <p>A: Open the Reports tab and select the report you want (salary slip, attendance, overtime, or CSV export). Tap <strong>Save & Share</strong> to save the generated file to your device or share it using Android file sharing.</p>
 
       <h3>Q: Can I use SalaryMate on multiple devices?</h3>
-      <p>A: Yes! Export your data as a JSON backup from one device, then import it on another using Profile → Cloud Data Backup → Restore. Your Pro subscription must be restored separately on each device via the Play Store.</p>
+      <p>A: Yes. Manually export your SalaryMate data as a JSON backup file from one device and import that file on another device. Pro subscription is restored separately via Google Play.</p>
 
       <h3>Q: How do I change the app language?</h3>
-      <p>A: Go to Profile → App Language and select from 12 available languages including English, Hindi, Spanish, French, German, Arabic, Portuguese, Russian, Japanese, Chinese, Indonesian, and Turkish.</p>
+      <p>A: Go to <strong>Profile &rarr; App Language</strong> and select from 12 available supported languages: English, Hindi, Spanish, French, German, Arabic, Portuguese, Russian, Japanese, Chinese, Indonesian, and Turkish.</p>
 
-      <h3>Q: Will my data be lost if I uninstall the app?</h3>
-      <p>A: Yes. Since SalaryMate uses local-first storage, uninstalling removes all data. Always export a JSON backup before uninstalling to preserve your records.</p>
+      <h3>Q: Will my data be lost if I uninstall SalaryMate?</h3>
+      <p>A: SalaryMate stores primary records locally on your device. Uninstalling the app removes locally stored app data. Before uninstalling, export a JSON backup to preserve your records. Note that uninstalling does not cancel an active Google Play subscription.</p>
+
+      <h3>Q: Does SalaryMate upload my salary or expense information?</h3>
+      <p>A: No. Salary, attendance, overtime, deductions, allowances, expense records, and related personal records are processed locally and are not transmitted to our servers. Firebase Analytics and Crashlytics receive anonymous usage/crash diagnostics, but SalaryMate is configured not to send salary figures, employee names, or attendance details in telemetry.</p>
+
+      <h3>Q: Does SalaryMate provide cloud backup?</h3>
+      <p>A: No. SalaryMate currently uses local backup/export functionality rather than a cloud backup service. You can manually export your data to a JSON backup file and store or transfer it yourself.</p>
+
+      <h3>Q: How can I report a bug or request a feature?</h3>
+      <p>A: Email <a href="mailto:Jasu1070@gmail.com" style="color: var(--primary-color);">Jasu1070@gmail.com</a> with a description of the issue, SalaryMate version, Android version, and steps to reproduce. Please do not send sensitive salary or personal information.</p>
+    </div>
+
+    <div class="card">
+      <h2>Subscription & Legal Policy Links</h2>
+      <p>SalaryMate Pro subscriptions purchased through Google Play are managed through Google Play's subscription system.</p>
+      <p>For more information, please review our official legal documents:</p>
+      <ul>
+        <li><a href="privacy-policy.html" style="color: var(--primary-color);">Privacy Policy</a> — Data safety, local processing, and telemetry disclosures.</li>
+        <li><a href="terms-of-use.html" style="color: var(--primary-color);">Terms of Use & EULA</a> — Disclaimers, license terms, and subscription rules.</li>
+        <li><a href="refund-policy.html" style="color: var(--primary-color);">Refund Policy</a> — Subscription cancellation and refund terms.</li>
+      </ul>
     </div>
 
     <footer>
