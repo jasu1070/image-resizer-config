@@ -3,121 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legal & Financial Disclaimers — PocketParent</title>
+  <title>Legal & Financial Disclaimers — PocketParent Legal Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #04050a;
-      --card-bg: rgba(13, 16, 32, 0.85);
+      --card-bg: rgba(13, 16, 32, 0.88);
       --border: rgba(255, 255, 255, 0.1);
       --text: #f3f4f6;
       --text-muted: #9ca3af;
-      --primary: #6366f1;
-      --primary-light: #818cf8;
-      --accent: #ec4899;
+      --primary: #f59e0b;
+      --primary-light: #fbbf24;
+      --accent: #10b981;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      line-height: 1.7;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--card-bg);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 48px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-    }
-    .badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 9999px;
-      background: rgba(236, 72, 153, 0.15);
-      color: var(--accent);
-      border: 1px solid rgba(236, 72, 153, 0.3);
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 16px;
-    }
-    h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; color: #ffffff; }
-    .effective-date { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; font-family: 'JetBrains Mono', monospace; }
-    h2 { font-size: 20px; font-weight: 700; color: #ffffff; margin-top: 36px; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
-    p, li { font-size: 14px; color: #d1d5db; margin-bottom: 16px; }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; line-height: 1.8; overflow-x: hidden; }
+    .bg-glow-1 { position: fixed; top: -100px; left: -100px; width: 600px; height: 600px; background: rgba(245, 158, 11, 0.1); filter: blur(140px); border-radius: 50%; pointer-events: none; }
+    
+    .top-header { position: sticky; top: 0; z-index: 100; background: rgba(4, 5, 10, 0.88); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+    .brand-icon { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; color: #fff; box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
+    .brand-name { font-size: 16px; font-weight: 800; }
+    .brand-sub { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted); }
+
+    .nav-tabs { background: rgba(13, 16, 32, 0.6); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; gap: 8px; overflow-x: auto; }
+    .tab-link { padding: 14px 20px; font-size: 13px; font-weight: 600; color: var(--text-muted); text-decoration: none; border-bottom: 2px solid transparent; }
+    .tab-link.active { color: var(--primary-light); border-bottom-color: var(--primary-light); }
+
+    .main-grid { max-width: 1280px; margin: 40px auto; padding: 0 32px; display: grid; grid-template-columns: 280px 1fr; gap: 40px; }
+    .toc-card { position: sticky; top: 130px; height: fit-content; background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 24px; backdrop-filter: blur(20px); }
+    .toc-header { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+    .toc-menu { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .toc-menu a { font-size: 12px; color: var(--text-muted); text-decoration: none; padding: 6px 12px; border-radius: 8px; display: block; }
+    .toc-menu a:hover { color: #fff; background: rgba(245, 158, 11, 0.1); }
+
+    .doc-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 48px; backdrop-filter: blur(24px); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8); }
+    h1 { font-size: 32px; font-weight: 800; color: #fff; letter-spacing: -1px; margin-bottom: 8px; }
+    .doc-date { font-size: 13px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; margin-bottom: 24px; }
+
+    section { margin-bottom: 40px; scroll-margin-top: 140px; }
+    h2 { font-size: 19px; font-weight: 800; color: #fff; margin-bottom: 16px; padding: 8px 16px; background: rgba(255, 255, 255, 0.02); border-left: 4px solid var(--primary-light); border-radius: 0 12px 12px 0; }
+    p, li { font-size: 14px; color: #d1d5db; margin-bottom: 14px; }
     ul, ol { padding-left: 24px; margin-bottom: 16px; }
-    li { margin-bottom: 8px; }
-    strong { color: #ffffff; }
-    .nav-links {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 32px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      color: var(--primary-light);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: #ffffff; text-decoration: underline; }
-    .warning-card {
-      background: rgba(245, 158, 11, 0.1);
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      border-radius: 16px;
-      padding: 20px;
-      margin: 24px 0;
-      font-size: 13px;
-      color: #fde68a;
-    }
+
+    .alert-warning { background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 16px; padding: 20px; margin: 24px 0; color: #fde68a; font-size: 13.5px; }
     footer { margin-top: 48px; pt-6; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-muted); text-align: center; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <span class="badge">Legal Disclaimers</span>
-    <h1>Platform Disclaimers & Financial Notice</h1>
-    <div class="effective-date">Last Updated: August 2, 2026</div>
+  <div class="bg-glow-1"></div>
 
-    <div class="nav-links">
-      <a href="terms.html">Terms of Service</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="coppa.html">COPPA Parental Consent</a>
-      <a href="disclaimer.html"><strong>Disclaimers</strong></a>
-    </div>
+  <header class="top-header">
+    <a href="index.html" class="brand">
+      <div class="brand-icon">⚖️</div>
+      <div class="brand-text">
+        <span class="brand-name">PocketParent</span>
+        <span class="brand-sub">Platform Disclaimers</span>
+      </div>
+    </a>
+  </header>
 
-    <div class="warning-card">
-      <strong>FINANCIAL & MEDICAL DISCLAIMER:</strong> POCKETPARENT IS NOT A BANK, INSTITUTIONAL FINANCIAL FIDUCIARY, OR CERTIFIED MEDICAL/PSYCHOLOGICAL HEALTHCARE PROVIDER.
-    </div>
+  <nav class="nav-tabs">
+    <a href="terms.html" class="tab-link">Terms of Service</a>
+    <a href="privacy.html" class="tab-link">Privacy Policy</a>
+    <a href="coppa.html" class="tab-link">COPPA Consent</a>
+    <a href="disclaimer.html" class="tab-link active">Disclaimers</a>
+    <a href="acceptable-use.html" class="tab-link">Acceptable Use</a>
+    <a href="subprocessors.html" class="tab-link">Subprocessors</a>
+  </nav>
 
-    <h2>1. Non-Financial Institution Notice</h2>
-    <p>PocketParent provides virtual point balances, gamified savings goals, and allowance calculation schedules strictly as internal organizational tools for parents.</p>
-    <ul>
-      <li>PocketParent does NOT process, hold, or transmit real money, fiat currency, or cryptocurrency.</li>
-      <li>Virtual wallets within PocketParent represent internal family point tallies and have no financial or banking legal status.</li>
-      <li>Parents remain solely responsible for fulfilling any real-world allowance payments or physical rewards promised to their children.</li>
-    </ul>
+  <div class="main-grid">
+    <aside class="toc-card">
+      <div class="toc-header">Disclaimer Index</div>
+      <ul class="toc-menu">
+        <li><a href="#sec1">1. Non-Monetary Currency</a></li>
+        <li><a href="#sec2">2. Educational & Financial</a></li>
+        <li><a href="#sec3">3. Family Agreement Waiver</a></li>
+        <li><a href="#sec4">4. No Medical/Parenting Advice</a></li>
+      </ul>
+    </aside>
 
-    <h2>2. Educational & Behavioral Tool Disclaimer</h2>
-    <p>PocketParent is a digital habit tracking software designed to assist parents in organizing family chores and routines. It is not a substitute for professional child development, medical, psychological, or behavioral advice.</p>
+    <main class="doc-card">
+      <h1>Legal & Financial Literacy Disclaimers</h1>
+      <div class="doc-date">Effective Date: August 10, 2026 | Document Ref: PP-DISC-2026-V5</div>
 
-    <h2>3. Parental Control Liability Release</h2>
-    <p>PocketParent is provided to assist parents in habit formation. We assume no liability or responsibility for parenting decisions, child discipline, intra-family disputes, or fulfillment of family rewards.</p>
+      <div class="alert-warning">
+        <strong>NON-FIAT VIRTUAL CURRENCY NOTICE:</strong> PocketParent is an educational chore gamification tool. Virtual points and allowance counters have zero cash value and are not financial instruments.
+      </div>
 
-    <footer>
-      &copy; 2026 PocketParent Inc. All Rights Reserved. Legal Protections Enforced Worldwide.
-    </footer>
+      <section id="sec1">
+        <h2>1. Non-Monetary Virtual Currency & Points Disclaimer</h2>
+        <p>
+          All virtual points, reward balances, XP levels, allowance counters, and digital badges displayed in PocketParent are non-monetary educational units designed solely for family gamification:
+        </p>
+        <ul>
+          <li>PocketParent is <strong>NOT a bank, credit union, financial institution, money transmitter, or cryptocurrency wallet/exchange</strong>.</li>
+          <li>Points generated in PocketParent <strong>cannot be exchanged for real money, legal tender, gift cards, or external commercial goods</strong> by PocketParent Inc.</li>
+        </ul>
+      </section>
+
+      <section id="sec2">
+        <h2>2. Financial Literacy Educational Simulation Only</h2>
+        <p>
+          The financial literacy tools, savings goals charts, and budget allocation calculators provided within the application are educational simulations intended to help parents teach children basic financial concepts. They do not constitute professional financial, tax, or investment advice.
+        </p>
+      </section>
+
+      <section id="sec3">
+        <h2>3. Private Family Agreements & Developer Exemption</h2>
+        <p>
+          Any real-world allowances, physical rewards, screen-time privileges, or pocket money promised by parents to children in exchange for completing chores are private arrangements exclusively between parent and child. PocketParent Inc. and its developers assume <strong>zero responsibility or legal liability for enforcing or fulfilling private family reward promises</strong>.
+        </p>
+      </section>
+
+      <section id="sec4">
+        <h2>4. No Medical, Psychological, or Parenting Advice</h2>
+        <p>
+          Articles, chore suggestions, and behavioral insights inside PocketParent are for general informational purposes only and do not constitute professional medical, psychological, or child development advice.
+        </p>
+      </section>
+
+      <footer>
+        &copy; 2026 PocketParent Inc. All Rights Reserved. Platform Legal Disclaimers.
+      </footer>
+    </main>
   </div>
 </body>
 </html>

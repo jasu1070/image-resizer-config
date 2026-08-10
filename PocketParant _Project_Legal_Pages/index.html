@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PocketParent — Global Legal & Trust Portal | Google Play Compliance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #04050a;
+      --card-bg: rgba(13, 16, 32, 0.88);
+      --card-hover: rgba(20, 24, 48, 0.95);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-accent: rgba(16, 185, 129, 0.3);
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --accent: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 0 0 60px 0;
+    }
+    .bg-glow-1 {
+      position: fixed;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 80%);
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .top-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(4, 5, 10, 0.88);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #fff;
+    }
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 22px;
+      color: #fff;
+      box-shadow: 0 0 24px rgba(16, 185, 129, 0.4);
+    }
+    .brand-name { font-size: 18px; font-weight: 800; tracking: -0.02em; }
+    .brand-sub { font-size: 11px; font-family: 'JetBrains Mono', monospace; color: var(--accent); font-weight: 600; }
+    .compliance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid var(--border-accent);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 48px auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 48px;
+      backdrop-filter: blur(24px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+    .google-play-banner {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(16, 185, 129, 0.12) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .google-play-banner h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .google-play-banner p { font-size: 13px; color: var(--text-muted); }
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-bottom: 40px;
+    }
+    a.card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.02);
+      transition: all 220ms ease;
+    }
+    a.card:hover {
+      border-color: var(--primary);
+      background: var(--card-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(99, 102, 241, 0.2);
+    }
+    .card-icon { font-size: 28px; margin-bottom: 16px; }
+    .card strong { display: block; font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px; }
+    .card-link { font-size: 13px; font-weight: 700; color: var(--accent); display: flex; align-items: center; gap: 4px; }
+    
+    .deletion-section {
+      background: rgba(239, 68, 68, 0.06);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      border-radius: 24px;
+      padding: 36px;
+      margin-top: 40px;
+    }
+    .deletion-section h2 { font-size: 22px; font-weight: 800; color: #fca5a5; margin-bottom: 12px; }
+    .deletion-section p { font-size: 14px; color: #e5e7eb; margin-bottom: 16px; }
+    .deletion-steps { padding-left: 20px; color: var(--text-muted); font-size: 13.5px; margin-bottom: 24px; }
+    .deletion-steps li { margin-bottom: 8px; }
+    .btn-danger {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      background: var(--danger);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13.5px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+      transition: all 180ms ease;
+    }
+    .btn-danger:hover { background: #dc2626; transform: translateY(-2px); }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+
+  <header class="top-header">
+    <a href="index.html" class="brand">
+      <div class="brand-icon">🛡️</div>
+      <div>
+        <div class="brand-name">PocketParent</div>
+        <div class="brand-sub">Global Legal & Trust Portal</div>
+      </div>
+    </a>
+    <div class="compliance-badge">
+      <span>✓</span> Google Play Verified & COPPA Compliant
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-card">
+      <h1>PocketParent Legal & Data Protection Center</h1>
+      <p class="subtitle">
+        PocketParent is an enterprise family chore management and financial literacy platform built with child safety, parental authority, and strict privacy protection at its core. Explore our global legal disclosures and privacy commitments below.
+      </p>
+
+      <div class="google-play-banner">
+        <div>
+          <h3>Google Play Store Developer Compliance Notice</h3>
+          <p>This portal fulfills all Google Play Developer Program Policies, COPPA (US), GDPR-K (EU/UK), and CCPA/CPRA disclosures.</p>
+        </div>
+        <a href="#deletion" class="btn-danger">Account Deletion Request</a>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="privacy.html">
+          <div>
+            <div class="card-icon">🔒</div>
+            <strong>Privacy Policy</strong>
+            <p>Complete data safety policy, personal data processing, third-party SDK disclosures, and parental rights.</p>
+          </div>
+          <span class="card-link">View Policy &rarr;</span>
+        </a>
+
+        <a class="card" href="terms.html">
+          <div>
+            <div class="card-icon">📜</div>
+            <strong>Terms of Service & EULA</strong>
+            <p>End User License Agreement, non-monetary virtual points disclaimers, parental authorization, and developer liability exemption.</p>
+          </div>
+          <span class="card-link">View Terms &rarr;</span>
+        </a>
+
+        <a class="card" href="coppa.html">
+          <div>
+            <div class="card-icon">👶</div>
+            <strong>COPPA Notice</strong>
+            <p>Verifiable Parental Consent (VPC) mechanisms, child profile safeguards, and strict non-ad profiling rules.</p>
+          </div>
+          <span class="card-link">View COPPA Disclosure &rarr;</span>
+        </a>
+
+        <a class="card" href="disclaimer.html">
+          <div>
+            <div class="card-icon">⚖️</div>
+            <strong>Legal Disclaimers</strong>
+            <p>Virtual points non-fiat status, financial literacy disclaimers, and parental supervisory liability limitations.</p>
+          </div>
+          <span class="card-link">View Disclaimers &rarr;</span>
+        </a>
+
+        <a class="card" href="acceptable-use.html">
+          <div>
+            <div class="card-icon">🛡️</div>
+            <strong>Acceptable Use Policy</strong>
+            <p>Community guidelines, prohibited content rules for chore photo uploads, and account termination policies.</p>
+          </div>
+          <span class="card-link">View Rules &rarr;</span>
+        </a>
+
+        <a class="card" href="subprocessors.html">
+          <div>
+            <div class="card-icon">☁️</div>
+            <strong>Subprocessors List</strong>
+            <p>Authorized enterprise subprocessors (Firebase, Google Cloud Infrastructure, Google Sign-In) and security certifications.</p>
+          </div>
+          <span class="card-link">View Subprocessors &rarr;</span>
+        </a>
+      </div>
+
+      <!-- Account Deletion Request Portal required by Google Play Store -->
+      <div id="deletion" class="deletion-section">
+        <h2>Google Play Store Account & Data Deletion Request</h2>
+        <p>
+          In full compliance with Google Play Store User Data policies, PocketParent account holders (parents/guardians) have the absolute right to request the complete, permanent deletion of their account, family profiles, child data, chore histories, and uploaded media.
+        </p>
+        <p><strong>How to Delete Your Account & Associated Data:</strong></p>
+        <ol class="deletion-steps">
+          <li><strong>In-App Deletion:</strong> Open the PocketParent Android App &gt; Go to <em>Settings</em> &gt; Tap <em>Security & Family Profile</em> &gt; Select <em>Delete PocketParent Account & Family Data</em>.</li>
+          <li><strong>Web Request:</strong> If you cannot access the mobile application, email our Data Protection Officer directly at <a href="mailto:privacy@pocketparent.app" style="color:#fca5a5; font-weight:700;">privacy@pocketparent.app</a> with the subject line <code>"ACCOUNT DELETION REQUEST"</code> using your registered parent email address.</li>
+        </ol>
+        <p><strong>Data Handling Upon Deletion:</strong> All user credentials, child profiles, Firestore documents, Firebase Storage chore images, and authentication records are permanently erased from active databases within 30 days.</p>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2026 PocketParent Inc. All Rights Reserved. Fully Compliant with Google Play Data Safety Guidelines, COPPA, GDPR-K, and CCPA/CPRA.
+    </footer>
+  </main>
+</body>
+</html>
