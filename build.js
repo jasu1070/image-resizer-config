@@ -23,7 +23,8 @@ const filesToCopy = [
 
 const dirsToCopy = [
   'assets',
-  'salary-mate-legal-pages'
+  'salary-mate-legal-pages',
+  'PocketParant _Project_Legal_Pages'
 ];
 
 filesToCopy.forEach(file => {
