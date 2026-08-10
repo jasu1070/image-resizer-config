@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COPPA Direct Parental Consent Disclosure — PocketParent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #04050a;
+      --card-bg: rgba(13, 16, 32, 0.85);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --accent: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; color: #ffffff; }
+    .effective-date { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; font-family: 'JetBrains Mono', monospace; }
+    h2 { font-size: 20px; font-weight: 700; color: #ffffff; margin-top: 36px; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    p, li { font-size: 14px; color: #d1d5db; margin-bottom: 16px; }
+    ul, ol { padding-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; }
+    strong { color: #ffffff; }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #ffffff; text-decoration: underline; }
+    .consent-box {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 24px 0;
+      font-size: 13px;
+      color: #a7f3d0;
+    }
+    footer { margin-top: 48px; pt-6; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">Direct Notice for Parents</span>
+    <h1>COPPA Direct Parental Consent Notice</h1>
+    <div class="effective-date">Last Updated: August 2, 2026</div>
+
+    <div class="nav-links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="coppa.html"><strong>COPPA Parental Consent</strong></a>
+      <a href="disclaimer.html">Disclaimers</a>
+    </div>
+
+    <div class="consent-box">
+      <strong>NOTICE TO PARENTS:</strong> Under the Children's Online Privacy Protection Act ("COPPA"), PocketParent must notify parents and obtain verifiable parental consent before collecting personal information from children under 13 years of age.
+    </div>
+
+    <h2>1. Information Collected Under Parental Consent</h2>
+    <p>PocketParent collects only minimal information necessary to operate family chore tracking and reward gamification:</p>
+    <ul>
+      <li><strong>Child Nickname / Display Name:</strong> Selected by the parent (e.g., "Leo" or "Alex").</li>
+      <li><strong>Avatar Choice:</strong> Cartoon character avatar selected by the family.</li>
+      <li><strong>Chore Photo Proof:</strong> Photos taken by children showing finished chores. These photos are encrypted and stored in private cloud buckets accessible exclusively by the parent.</li>
+    </ul>
+
+    <h2>2. No Third-Party Advertising or Social Sharing</h2>
+    <p>We do NOT allow third-party behavioral advertising to children, nor do we allow children to communicate publicly with strangers or share data outside their family network.</p>
+
+    <h2>3. Parental Control & Revocation Rights</h2>
+    <p>Parents may at any time:</p>
+    <ul>
+      <li>Review the personal information collected from their child.</li>
+      <li>Refuse to permit further collection or use of their child's information.</li>
+      <li>Request the permanent deletion of their child's account and profile data.</li>
+    </ul>
+
+    <h2>4. How to Contact Us</h2>
+    <p>To exercise your parental rights or ask questions about COPPA compliance, contact our Privacy Director:</p>
+    <p style="font-family: 'JetBrains Mono', monospace; color: var(--primary-light);">Email: coppa@pocketparent.app</p>
+
+    <footer>
+      &copy; 2026 PocketParent Inc. All Rights Reserved. Fully Compliant with U.S. FTC COPPA Standards.
+    </footer>
+  </div>
+</body>
+</html>

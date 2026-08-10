@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Third-Party Subprocessors List — PocketParent Legal Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030408;
+      --card-bg: rgba(11, 14, 28, 0.9);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-main: #f1f5f9;
+      --text-body: #cbd5e1;
+      --text-muted: #64748b;
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --accent-green: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg); color: var(--text-main); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; line-height: 1.8; }
+    .top-header { position: sticky; top: 0; z-index: 100; background: rgba(3, 4, 8, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--card-border); padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; }
+    .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+    .brand-icon { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #6366f1, #a855f7); display: flex; align-items: center; justify-content: center; font-weight: 800; }
+    .brand-title { font-size: 16px; font-weight: 800; }
+    .nav-tabs-bar { background: rgba(11, 14, 28, 0.6); border-bottom: 1px solid var(--card-border); padding: 0 32px; display: flex; gap: 8px; overflow-x: auto; }
+    .tab-item { padding: 14px 20px; font-size: 13px; font-weight: 600; color: var(--text-muted); text-decoration: none; border-bottom: 2px solid transparent; }
+    .tab-item.active { color: var(--primary-light); border-bottom-color: var(--primary); }
+    .container { max-width: 1000px; margin: 40px auto; padding: 48px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.7); }
+    h1 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .subtitle { font-size: 14px; color: var(--text-muted); font-family: 'JetBrains Mono'; margin-bottom: 32px; }
+    
+    /* Table styling */
+    table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 13px; }
+    th { text-align: left; padding: 14px; background: rgba(255,255,255,0.04); color: var(--primary-light); border-bottom: 1px solid var(--card-border); font-weight: 700; }
+    td { padding: 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-body); }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .badge-sub { font-family: 'JetBrains Mono'; font-size: 11px; color: var(--accent-green); background: rgba(16, 185, 129, 0.1); padding: 2px 8px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header class="top-header">
+    <a href="terms.html" class="brand-logo"><div class="brand-icon">P</div><span class="brand-title">PocketParent Legal Portal</span></a>
+  </header>
+  <nav class="nav-tabs-bar">
+    <a href="terms.html" class="tab-item">Terms of Service & EULA</a>
+    <a href="privacy.html" class="tab-item">Privacy Policy</a>
+    <a href="coppa.html" class="tab-item">COPPA Parental Notice</a>
+    <a href="disclaimer.html" class="tab-item">Platform Disclaimers</a>
+    <a href="acceptable-use.html" class="tab-item">Acceptable Use Policy</a>
+    <a href="subprocessors.html" class="tab-item active">Third-Party Subprocessors</a>
+  </nav>
+
+  <div class="container">
+    <h1>Authorized Data Subprocessors</h1>
+    <div class="subtitle">Effective Date: August 2, 2026 | Ref: PP-SUB-2026-V4</div>
+
+    <p>PocketParent engages third-party data subprocessors to provide infrastructure, database storage, and push notifications. All subprocessors undergo security reviews and comply with COPPA, GDPR-K, and ISO 27001 data processing agreements.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Subprocessor Name</th>
+          <th>Purpose of Processing</th>
+          <th>Location</th>
+          <th>Compliance Certification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google Cloud Platform / Firebase</strong></td>
+          <td>Database (Firestore), Auth, Cloud Storage (photo proofs), Functions API</td>
+          <td>United States (us-central1)</td>
+          <td><span class="badge-sub">SOC 2 / ISO 27001 / COPPA</span></td>
+        </tr>
+        <tr>
+          <td><strong>Firebase Cloud Messaging (FCM)</strong></td>
+          <td>Push notification delivery for task reminders and parent alerts</td>
+          <td>Global Gateway</td>
+          <td><span class="badge-sub">ISO 27001 / GDPR</span></td>
+        </tr>
+        <tr>
+          <td><strong>Apple Inc. (App Store)</strong></td>
+          <td>In-app purchase validation & subscription billing</td>
+          <td>United States / Global</td>
+          <td><span class="badge-sub">PCI-DSS / ISO 27001</span></td>
+        </tr>
+        <tr>
+          <td><strong>Google LLC (Google Play)</strong></td>
+          <td>In-app purchase validation & subscription billing</td>
+          <td>United States / Global</td>
+          <td><span class="badge-sub">PCI-DSS / ISO 27001</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
