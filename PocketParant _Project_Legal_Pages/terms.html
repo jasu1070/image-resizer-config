@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Terms of Service & EULA</h1>
+    <div class="header-brand-badge">📜 Legal Agreement</div>
+    <h1>Master Terms of Service & EULA</h1>
     <p>Last Updated: August 2026 • Published by Shravas Digital</p>
   </header>
 
@@ -27,17 +28,25 @@
       <a href="subprocessors.html" class="nav-link">Subprocessors</a>
     </div>
 
+    <div class="action-bar">
+      <div class="action-bar-title">Document Reference: PP-TOS-2026-V6</div>
+      <div class="action-group">
+        <button class="action-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+        <button class="action-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');">🔗 Copy Link</button>
+        <button class="action-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️ Top</button>
+      </div>
+    </div>
+
     <div class="card">
-      <h2>Master Terms of Service & End User License Agreement (EULA)</h2>
       <div class="highlight-box">
         <strong>IMPORTANT LEGAL NOTICE:</strong> By downloading, installing, or accessing PocketParent, you (the parent or legal guardian) enter into a legally binding agreement with Shravas Digital. Please read Section 2 regarding the non-monetary, non-fiat status of all internal gamification points.
       </div>
 
-      <h2>1. Acceptance of Terms & Parental Authorization</h2>
+      <h2><span class="sec-badge">01</span> Acceptance of Terms & Parental Authorization</h2>
       <p>PocketParent is designed strictly for family routine management and child financial literacy education. Accounts must be registered by a legal parent or court-appointed guardian who is at least 18 years of age (or the legal age of majority in your jurisdiction).</p>
       <p>By creating an account, you represent and warrant that you possess full legal authority to register your household and manage child profiles within the application.</p>
 
-      <h2>2. Non-Monetary Virtual Points & Rewards Disclaimer</h2>
+      <h2><span class="sec-badge">02</span> Non-Monetary Virtual Points & Rewards Disclaimer</h2>
       <p><strong>PLEASE READ THIS SECTION CAREFULLY:</strong></p>
       <ul>
         <li><strong>No Real Monetary Value:</strong> All points, tokens, virtual currency units, allowance tallies, and rewards displayed within PocketParent are strictly internal educational tools and gamification metrics.</li>
@@ -45,19 +54,19 @@
         <li><strong>Internal Family Agreements:</strong> Any real-world allowances or physical rewards promised to children in exchange for completing chores are strictly private arrangements between parent and child. Shravas Digital bears zero responsibility or liability for fulfilling family reward promises.</li>
       </ul>
 
-      <h2>3. Mobile App License (EULA)</h2>
+      <h2><span class="sec-badge">03</span> Mobile App License (EULA)</h2>
       <p>Shravas Digital grants you a limited, non-exclusive, non-transferable, revocable license to download and execute the PocketParent application on mobile devices owned or controlled by you, solely for non-commercial family management. You may not reverse engineer, decompile, or modify the mobile binary.</p>
 
-      <h2>4. Parental Responsibility & Account Security</h2>
+      <h2><span class="sec-badge">04</span> Parental Responsibility & Account Security</h2>
       <p>Parents/guardians are solely responsible for setting appropriate chore tasks, supervising child app usage, protecting their account password, and maintaining the secrecy of their 4-digit Parent Security PIN lock. You agree to notify us immediately of any unauthorized access to your account.</p>
 
-      <h2>5. Limitation of Liability & Developer Exemption</h2>
+      <h2><span class="sec-badge">05</span> Limitation of Liability & Developer Exemption</h2>
       <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE INTERNATIONAL LAW, SHRAVAS DIGITAL, ITS DEVELOPERS, OFFICERS, AND AFFILIATES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, DEVICE MALFUNCTION, OR PRIVATE FAMILY DISPUTES ARISING OUT OF APP USE. OUR TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED $100 USD.</p>
 
-      <h2>6. Account Termination & Data Deletion</h2>
-      <p>We reserve the right to suspend or terminate accounts that violate our Acceptable Use Policy. Parents may terminate their account and purge all family data anytime via <em>Settings &gt; Delete Account</em> inside the app or by submitting a web request at <a href="index.html#deletion" style="color: var(--primary-color);">Account Deletion Request</a>.</p>
+      <h2><span class="sec-badge">06</span> Account Termination & Data Deletion</h2>
+      <p>We reserve the right to suspend or terminate accounts that violate our Acceptable Use Policy. Parents may terminate their account and purge all family data anytime via <em>Settings &gt; Delete Account</em> inside the app or by submitting a web request at <a href="index.html#deletion" style="color: var(--primary-color); font-weight: 700;">Account Deletion Request Portal</a>.</p>
 
-      <h2>7. Governing Law & Mandatory Binding Arbitration</h2>
+      <h2><span class="sec-badge">07</span> Governing Law & Mandatory Binding Arbitration</h2>
       <p>These Terms are governed by international commercial standards and applicable consumer protection laws. Any dispute arising out of or relating to PocketParent shall be resolved through binding individual arbitration, and you explicitly waive any right to participate in class actions or class-wide arbitration.</p>
     </div>
 

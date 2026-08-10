@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Acceptable Use Policy & Community Safety</h1>
+    <div class="header-brand-badge">🛡️ Community Safety</div>
+    <h1>Acceptable Use Policy & Safety</h1>
     <p>Last Updated: August 2026 • Published by Shravas Digital</p>
   </header>
 
@@ -27,17 +28,24 @@
       <a href="subprocessors.html" class="nav-link">Subprocessors</a>
     </div>
 
+    <div class="action-bar">
+      <div class="action-bar-title">Document Reference: PP-AUP-2026-V6</div>
+      <div class="action-group">
+        <button class="action-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+        <button class="action-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');">🔗 Copy Link</button>
+        <button class="action-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️ Top</button>
+      </div>
+    </div>
+
     <div class="card">
-      <h2>Acceptable Use Policy & Community Safety Guidelines</h2>
-      
       <div class="highlight-box">
         <strong>SAFE FAMILY ENVIRONMENT GUARANTEE:</strong> PocketParent maintains a zero-tolerance policy against inappropriate content, child exploitation, and abusive behavior.
       </div>
 
-      <h2>1. Safe Family Environment Standard</h2>
+      <h2><span class="sec-badge">01</span> Safe Family Environment Standard</h2>
       <p>PocketParent is dedicated to creating a positive, uplifting family productivity environment. All uploaded media, chore titles, and family member display names must adhere to family-safe standards.</p>
 
-      <h2>2. Strictly Prohibited Content & Behavior</h2>
+      <h2><span class="sec-badge">02</span> Strictly Prohibited Content & Behavior</h2>
       <p>Users may not upload, transmit, or store content that:</p>
       <ul>
         <li>Is obscene, pornographic, sexually explicit, or harmful to minors.</li>
@@ -46,10 +54,10 @@
         <li>Attempts to bypass or hack Parent Security PIN locks or app security mechanisms.</li>
       </ul>
 
-      <h2>3. Rules for Optional Chore Proof Photos</h2>
+      <h2><span class="sec-badge">03</span> Rules for Optional Chore Proof Photos</h2>
       <p>Photos uploaded to verify chore completion must strictly depict household tasks (e.g., a clean bedroom, washed dishes, completed homework) and must not contain sensitive personal identifiable information or inappropriate imagery.</p>
 
-      <h2>4. Account Suspension & Termination</h2>
+      <h2><span class="sec-badge">04</span> Account Suspension & Termination</h2>
       <p>Shravas Digital reserves the right to immediately suspend or permanently ban accounts found in violation of this Acceptable Use Policy without prior notice.</p>
     </div>
 

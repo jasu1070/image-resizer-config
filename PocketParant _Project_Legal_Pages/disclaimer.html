@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
+    <div class="header-brand-badge">⚖️ Platform Disclaimers</div>
     <h1>Legal & Financial Literacy Disclaimers</h1>
     <p>Last Updated: August 2026 • Published by Shravas Digital</p>
   </header>
@@ -27,27 +28,34 @@
       <a href="subprocessors.html" class="nav-link">Subprocessors</a>
     </div>
 
+    <div class="action-bar">
+      <div class="action-bar-title">Document Reference: PP-DISC-2026-V6</div>
+      <div class="action-group">
+        <button class="action-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+        <button class="action-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');">🔗 Copy Link</button>
+        <button class="action-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️ Top</button>
+      </div>
+    </div>
+
     <div class="card">
-      <h2>Platform Legal Disclaimers & Notice</h2>
-      
       <div class="highlight-box">
         <strong>NON-FIAT VIRTUAL CURRENCY NOTICE:</strong> PocketParent is an educational chore gamification tool. Virtual points and allowance counters have zero real-world cash value and are not financial instruments or banking products.
       </div>
 
-      <h2>1. Non-Monetary Virtual Currency & Points Disclaimer</h2>
+      <h2><span class="sec-badge">01</span> Non-Monetary Virtual Currency & Points Disclaimer</h2>
       <p>All virtual points, reward balances, XP levels, allowance counters, and digital badges displayed in PocketParent are non-monetary educational units designed solely for family gamification:</p>
       <ul>
         <li>PocketParent is <strong>NOT a bank, credit union, financial institution, money transmitter, or cryptocurrency wallet/exchange</strong>.</li>
         <li>Points generated in PocketParent <strong>cannot be exchanged for real money, legal tender, gift cards, or external commercial goods</strong> by Shravas Digital.</li>
       </ul>
 
-      <h2>2. Financial Literacy Educational Simulation Only</h2>
+      <h2><span class="sec-badge">02</span> Financial Literacy Educational Simulation Only</h2>
       <p>The financial literacy tools, savings goals charts, and budget allocation calculators provided within the application are educational simulations intended to help parents teach children basic financial concepts. They do not constitute professional financial, tax, or investment advice.</p>
 
-      <h2>3. Private Family Agreements & Developer Exemption</h2>
+      <h2><span class="sec-badge">03</span> Private Family Agreements & Developer Exemption</h2>
       <p>Any real-world allowances, physical rewards, screen-time privileges, or pocket money promised by parents to children in exchange for completing chores are private arrangements exclusively between parent and child. Shravas Digital assumes <strong>zero responsibility or legal liability for enforcing or fulfilling private family reward promises</strong>.</p>
 
-      <h2>4. No Medical, Psychological, or Parenting Advice</h2>
+      <h2><span class="sec-badge">04</span> No Medical, Psychological, or Parenting Advice</h2>
       <p>Articles, chore suggestions, and behavioral insights inside PocketParent are for general informational purposes only and do not constitute professional medical, psychological, or child development advice.</p>
     </div>
 

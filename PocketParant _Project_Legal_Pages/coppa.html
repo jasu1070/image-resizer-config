@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
+    <div class="header-brand-badge">👶 Child Safety & COPPA Notice</div>
     <h1>COPPA Direct Parental Consent Notice</h1>
     <p>Last Updated: August 2026 • Published by Shravas Digital</p>
   </header>
@@ -27,24 +28,31 @@
       <a href="subprocessors.html" class="nav-link">Subprocessors</a>
     </div>
 
+    <div class="action-bar">
+      <div class="action-bar-title">Document Reference: PP-COPPA-2026-V6</div>
+      <div class="action-group">
+        <button class="action-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+        <button class="action-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');">🔗 Copy Link</button>
+        <button class="action-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️ Top</button>
+      </div>
+    </div>
+
     <div class="card">
-      <h2>Children's Online Privacy Protection Act (COPPA) Disclosure</h2>
-      
-      <div class="highlight-box">
+      <div class="highlight-box-green">
         <strong>VERIFIABLE PARENTAL CONSENT GUARANTEE:</strong> PocketParent strictly adheres to the US Children's Online Privacy Protection Act (COPPA) (15 U.S.C. §§ 6501–6506) and 16 CFR Part 312 regulations.
       </div>
 
-      <h2>1. Direct Parental Consent Mechanism</h2>
+      <h2><span class="sec-badge">01</span> Direct Parental Consent Mechanism</h2>
       <p>PocketParent requires that all child profiles are created directly by a verified parent or legal guardian inside a parent-authenticated account protected by email/password verification and a 4-digit Parent Security PIN lock. Children cannot independently create accounts or access the application without parent initialization.</p>
 
-      <h2>2. Strict Child Data Minimization</h2>
+      <h2><span class="sec-badge">02</span> Strict Child Data Minimization</h2>
       <p>We collect only the minimum information necessary to participate in chore gamification (e.g., first nickname, cartoon avatar, chore completion logs). We never require or request children's real full names, physical addresses, phone numbers, or social media handles.</p>
 
-      <h2>3. Zero Third-Party Advertising & Profiling</h2>
+      <h2><span class="sec-badge">03</span> Zero Third-Party Advertising & Profiling</h2>
       <p>PocketParent contains <strong>ZERO third-party ad networks, zero targeted advertising, zero behavioural profiling, and zero data monetization</strong>. Child activity data is processed exclusively to maintain chore logs and reward points within the family unit.</p>
 
-      <h2>4. Parental Right to Inspect and Delete Child Data</h2>
-      <p>Parents retain full statutory rights under COPPA to inspect, modify, or permanently delete their child's profile data at any time via the PocketParent App under <em>Settings &gt; Family Profile</em>, or by contacting our team at <a href="mailto:Jasu1070@gmail.com" style="color: var(--primary-color);">Jasu1070@gmail.com</a>.</p>
+      <h2><span class="sec-badge">04</span> Parental Right to Inspect and Delete Child Data</h2>
+      <p>Parents retain full statutory rights under COPPA to inspect, modify, or permanently delete their child's profile data at any time via the PocketParent App under <em>Settings &gt; Family Profile</em>, or by contacting our team at <a href="mailto:Jasu1070@gmail.com" style="color: var(--primary-color); font-weight: 700;">Jasu1070@gmail.com</a>.</p>
     </div>
 
     <footer>
