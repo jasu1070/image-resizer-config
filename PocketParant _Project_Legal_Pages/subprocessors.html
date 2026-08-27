@@ -11,31 +11,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="header-brand-badge">☁️ Infrastructure & Trust</div>
-    <h1>Authorized Enterprise Subprocessors</h1>
-    <p>Last Updated: August 2026 • Published by Shravas Digital</p>
-  </header>
+  <div class="top-bar"></div>
 
   <div class="container">
-    <div class="nav-bar">
-      <a href="index.html" class="nav-link">Overview</a>
-      <a href="terms.html" class="nav-link">Terms of Service</a>
-      <a href="privacy.html" class="nav-link">Privacy Policy</a>
-      <a href="coppa.html" class="nav-link">COPPA Consent</a>
-      <a href="disclaimer.html" class="nav-link">Disclaimers</a>
-      <a href="acceptable-use.html" class="nav-link">Acceptable Use</a>
-      <a href="subprocessors.html" class="nav-link active">Subprocessors</a>
-    </div>
-
-    <div class="action-bar">
-      <div class="action-bar-title">Document Reference: PP-SUB-2026-V6</div>
-      <div class="action-group">
-        <button class="action-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
-        <button class="action-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');">🔗 Copy Link</button>
-        <button class="action-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️ Top</button>
+    <header class="page-header">
+      <div class="app-logo">
+        PocketParent: <span class="app-logo-accent">Trust &amp; Legal Center</span>
       </div>
-    </div>
+      <div class="title-block">
+        <h1 class="page-title">Authorized Enterprise Subprocessors</h1>
+        <div class="last-updated">Last Updated: August 27, 2026 • Published by Shravas Digital</div>
+      </div>
+    </header>
+
+
 
     <div class="card">
       <h2><span class="sec-badge">01</span> Authorized Subprocessor Directory</h2>
@@ -48,19 +37,19 @@
               <th>Subprocessor</th>
               <th>Service Provided</th>
               <th>Data Location</th>
-              <th>Security & Certifications</th>
+              <th>Security &amp; Certifications</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><strong>Google Cloud Platform (GCP)</strong></td>
-              <td>Encrypted Cloud Firestore Database & Hosting</td>
+              <td>Encrypted Cloud Firestore Database &amp; Hosting</td>
               <td>Global / USA / EU</td>
               <td><span class="badge badge-green">ISO 27001, SOC 2 Type II, COPPA</span></td>
             </tr>
             <tr>
-              <td><strong>Firebase Auth & Google Sign-In</strong></td>
-              <td>User Session Verification & Security Tokens</td>
+              <td><strong>Firebase Auth &amp; Google Sign-In</strong></td>
+              <td>User Session Verification &amp; Security Tokens</td>
               <td>Global / USA</td>
               <td><span class="badge badge-blue">ISO 27001, SOC 1/2/3, GDPR DPA</span></td>
             </tr>
@@ -79,14 +68,23 @@
           </tbody>
         </table>
       </div>
+    </div>
 
+    <div class="card">
       <h2><span class="sec-badge">02</span> Data Protection Agreements (DPAs)</h2>
       <p>All listed subprocessors operate under legally binding Data Protection Agreements (DPAs) guaranteeing full compliance with GDPR Standard Contractual Clauses (SCCs), CCPA/CPRA, and COPPA data processing regulations.</p>
     </div>
 
-    <footer>
+    <footer class="page-footer">
       <p>Crafted with ❤️ by <strong>Shravas Digital</strong>.</p>
-      <p>Copyright © 2026 Shravas Digital. All rights reserved.</p>
+      <p>&copy; 2026 Shravas Digital. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Overview</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="contact-support.html">Contact &amp; Support</a>
+      </div>
     </footer>
   </div>
 </body>
